@@ -30,12 +30,20 @@
         tools:layout="@layout/class_layout" />
     <fragment
         android:id="@+id/StudentProfile"
-        android:name="com.vanarsdale.makinganav.BlankFragment"
-        android:label="class_layout"
+        android:name="com.vanarsdale.makinganav.StudentProfileFragment"
+        android:label="student_profile"
         tools:layout="@layout/studentprofile" >
         <action
             android:id="@+id/action_StudentLayout_to_ClassLayout3"
             app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_StudentProfile_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
     </fragment>
+    <fragment
+        android:id="@+id/AdvisingInfo"
+        android:name="com.vanarsdale.makinganav.AdvisingInfoFragment"
+        android:label="fragment_advising_info"
+        tools:layout="@layout/fragment_advising_info" />
 
 </navigation>
