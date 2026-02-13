@@ -2,4 +2,43 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="fragment_horizontal_margin">16dp</dimen>
     <dimen name="fragment_vertical_margin">16dp</dimen>
+
+    <!-- General dimensions -->
+    <dimen name="button_width_large">508dp</dimen>
+    <dimen name="button_height_large">85dp</dimen>
+    <dimen name="button_height_medium">75dp</dimen>
+    <dimen name="button_width_regular">278dp</dimen>
+    <dimen name="button_height_regular">61dp</dimen>
+    <dimen name="button_width_small">188dp</dimen>
+    <dimen name="button_height_small">39dp</dimen>
+    <dimen name="edit_text_width">331dp</dimen>
+    <dimen name="image_view_logo_size">250dp</dimen>
+    <dimen name="image_view_icon_width">56dp</dimen>
+    <dimen name="image_view_icon_height">53dp</dimen>
+    <dimen name="image_view_flowchart_width">417dp</dimen>
+    <dimen name="image_view_flowchart_height">426dp</dimen>
+    <dimen name="webview_width">62dp</dimen>
+    <dimen name="webview_height">57dp</dimen>
+    <dimen name="bottom_app_bar_width_large">409dp</dimen>
+    <dimen name="bottom_app_bar_width_medium">408dp</dimen>
+    <dimen name="bottom_app_bar_width_small">406dp</dimen>
+    <dimen name="bottom_app_bar_height_large">309dp</dimen>
+    <dimen name="bottom_app_bar_height_medium">96dp</dimen>
+    <dimen name="bottom_app_bar_height_small">39dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_size_display">55sp</dimen>
+    <dimen name="text_size_headline">30sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_subhead">20sp</dimen>
+    <dimen name="text_size_body_2">18sp</dimen>
+    <dimen name="text_size_body_1">16sp</dimen>
+    <dimen name="text_size_caption">15sp</dimen>
+    <dimen name="text_size_button">25sp</dimen>
+
+    <!-- Spacing -->
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
 </resources>

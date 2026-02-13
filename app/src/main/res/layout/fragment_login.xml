@@ -13,21 +13,21 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="278dp"
-        android:layout_height="61dp"
-        android:textSize="20sp"
+        android:layout_width="@dimen/button_width_regular"
+        android:layout_height="@dimen/button_height_regular"
+        android:textSize="@dimen/text_size_subhead"
         android:layout_gravity="start"
-        android:backgroundTint="#d22031"
+        android:backgroundTint="@color/brand_red"
         android:enabled="false"
-        android:text="@string/action_sign_in"
-        android:textColor="#FFFFFF"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="575dp" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="331dp"
+        android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:autofillHints="@string/prompt_password"
         android:hint="@string/prompt_password"
@@ -43,16 +43,16 @@
         android:id="@+id/checkedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Forgot Password?"
+        android:layout_marginStart="@dimen/spacing_large"
+        android:text="@string/forgot_password"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="484dp" />
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="331dp"
+        android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="@dimen/spacing_large"
         android:autofillHints="@string/prompt_email"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
@@ -71,9 +71,9 @@
 
     <ImageView
         android:id="@+id/imageViewLogo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:contentDescription="University Logo"
+        android:layout_width="@dimen/image_view_logo_size"
+        android:layout_height="@dimen/image_view_logo_size"
+        android:contentDescription="@string/university_logo_description"
         android:src="@drawable/UT_Spartans_wordmark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

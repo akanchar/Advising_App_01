@@ -1,14 +1,40 @@
 <resources>
-    <string name="app_name">Making A Nav</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <!-- Strings related to login -->
+
+    <!-- General Text -->
+    <string name="u_plan_title">U-PLAN</string>
+    <string name="university_logo_description">University Logo</string>
+
+    <!-- Text for class_layout.xml -->
+    <string name="math_major_flowchart_title">Math Major Flowchart</string>
+
+    <!-- Text for fragment_login.xml -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="action_sign_in_short">Sign In</string>
+
+
+    <!-- Text for loading_screen.xml -->
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+
+    <!-- Text for studentprofile.xml -->
+    <string name="select_graduation_date">Select Graduation Date</string>
+    <string name="graduate_student_prompt">Are you a graduate student?</string>
+    <string name="transfer_student_prompt">Are you a transfer student?</string>
+    <string name="see_graduation_plan">See graduation plan</string>
+    <string name="find_your_advisor">Find your advisor</string>
+
+    <!-- Text for fragment_advising_info.xml -->
+    <string name="advising_steps_overview_title">Advising Steps Overview</string>
+    <string name="advising_steps_content">1. Log into Workday to check for holds.
+2. Review your degree audit.
+3. Schedule an appointment with your advisor.
+4. Prepare a list of potential classes.
+5. Meet with your advisor and get cleared for registration.</string>
+    <string name="advisor_contact_info_title">Advisor Contact Info</string>
+    <string name="advisor_name">Name: Dr. John Smith</string>
+    <string name="advisor_email">Email: jsmith@ut.edu</string>
+    <string name="advisor_office">Office: Plant Hall 123</string>
+    <string name="back">Back</string>
 </resources>
