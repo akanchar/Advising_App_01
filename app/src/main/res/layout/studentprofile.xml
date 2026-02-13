@@ -7,37 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="@dimen/button_width_large"
-        android:layout_height="@dimen/button_height_large"
-        android:backgroundTint="@color/semi_transparent_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+    <include
+        android:id="@+id/reusable_header"
+        layout="@layout/reusable_header"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-8dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:shadowColor="@color/black"
-        android:shadowDx="6"
-        android:shadowDy="4"
-        android:shadowRadius="4"
-        android:text="@string/u_plan_title"
-        android:textColor="@color/brand_red"
-        android:textSize="@dimen/text_size_display"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-8dp" />
-
-
-    <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtGradDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_graduation_date"
@@ -118,7 +96,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/swtchGrad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/fragment_horizontal_margin"
@@ -129,24 +107,13 @@
         app:layout_constraintVertical_bias="0.867" />
 
     <Switch
-        android:id="@+id/switch2"
+        android:id="@+id/swtchTransfer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/fragment_horizontal_margin"
         android:text="@string/transfer_student_prompt"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="638dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="@dimen/image_view_icon_width"
-        android:layout_height="@dimen/image_view_icon_height"
-        android:layout_marginStart="@dimen/spacing_small"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:contentDescription="@string/university_logo_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/UT_Spartans_wordmark" />
 
     <WebView
         android:layout_width="@dimen/webview_width"
@@ -156,7 +123,7 @@
         tools:layout_editor_absoluteY="8dp" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btnGradPlan"
         android:layout_width="@dimen/button_width_small"
         android:layout_height="@dimen/button_height_small"
         android:layout_gravity="start"
@@ -172,7 +139,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/login3"
+        android:id="@+id/btnFindAdvisor"
         android:layout_width="@dimen/button_width_small"
         android:layout_height="@dimen/button_height_small"
         android:layout_gravity="start"

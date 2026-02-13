@@ -12,7 +12,7 @@
     tools:context=".ui.login.LoginFragment">
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btnSignupFL"
         android:layout_width="@dimen/button_width_regular"
         android:layout_height="@dimen/button_height_regular"
         android:textSize="@dimen/text_size_subhead"
@@ -26,7 +26,7 @@
         tools:layout_editor_absoluteY="575dp" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordFL"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:autofillHints="@string/prompt_password"
@@ -40,7 +40,7 @@
         tools:layout_editor_absoluteY="423dp" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView"
+        android:id="@+id/txtForgotPassFL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_large"
@@ -49,7 +49,7 @@
         tools:layout_editor_absoluteY="484dp" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/emailFL"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_large"
@@ -70,7 +70,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/UTLogoFL"
         android:layout_width="@dimen/image_view_logo_size"
         android:layout_height="@dimen/image_view_logo_size"
         android:contentDescription="@string/university_logo_description"

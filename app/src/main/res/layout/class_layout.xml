@@ -5,15 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="@dimen/button_width_large"
-        android:layout_height="@dimen/button_height_large"
-        android:backgroundTint="@color/semi_transparent_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+    <include
+        android:id="@+id/reusable_header"
+        layout="@layout/reusable_header"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-8dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button5"
@@ -25,34 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="142dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:shadowColor="@color/black"
-        android:shadowDx="6"
-        android:shadowDy="4"
-        android:shadowRadius="4"
-        android:text="@string/u_plan_title"
-        android:textColor="@color/brand_red"
-        android:textSize="@dimen/text_size_display"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-8dp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="@dimen/image_view_icon_width"
-        android:layout_height="@dimen/image_view_icon_height"
-        android:layout_marginStart="@dimen/spacing_small"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:contentDescription="@string/university_logo_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/UT_Spartans_wordmark" />
-
     <WebView
         android:layout_width="@dimen/webview_width"
         android:layout_height="@dimen/webview_height"
@@ -61,7 +30,7 @@
         tools:layout_editor_absoluteY="8dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgMajorPath"
         android:layout_width="@dimen/image_view_flowchart_width"
         android:layout_height="@dimen/image_view_flowchart_height"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +41,7 @@
         app:srcCompat="@drawable/mathclas" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtMajor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:shadowColor="@color/black"

@@ -8,7 +8,7 @@
     tools:context=".BlankFragment">
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/UTLogoLS"
         android:layout_width="@dimen/image_view_logo_size"
         android:layout_height="@dimen/image_view_logo_size"
         android:contentDescription="@string/university_logo_description"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.175" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtUPlanLS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:shadowColor="@color/black"
@@ -38,7 +38,7 @@
         tools:layout_editor_absoluteY="400dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSignupLS"
         android:layout_width="@dimen/button_width_regular"
         android:layout_height="@dimen/button_height_regular"
         android:backgroundTint="@color/brand_red"
@@ -51,7 +51,7 @@
         tools:layout_editor_absoluteY="590dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLoginLS"
         android:layout_width="@dimen/button_width_regular"
         android:layout_height="@dimen/button_height_regular"
         android:backgroundTint="@color/brand_red"
