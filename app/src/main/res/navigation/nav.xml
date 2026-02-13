@@ -45,5 +45,10 @@
         android:name="com.vanarsdale.makinganav.AdvisingInfoFragment"
         android:label="fragment_advising_info"
         tools:layout="@layout/fragment_advising_info" />
+    <fragment
+        android:id="@+id/FAQ_Resources"
+        android:name="com.vanarsdale.makinganav.FAQ_Resources"
+        android:label="fragment_f_a_q__resources"
+        tools:layout="@layout/fragment_f_a_q__resources" />
 
 </navigation>
