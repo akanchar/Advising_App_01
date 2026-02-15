@@ -14,7 +14,7 @@ class StudentProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.studentprofile, container, false)
+        val view = inflater.inflate(R.layout.fragment_studentprofile, container, false)
 
         val advisorButton = view.findViewById<Button>(R.id.login3)
         advisorButton.isEnabled = true // Ensure it's clickable
