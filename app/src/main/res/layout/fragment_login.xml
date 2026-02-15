@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:paddingLeft="@dimen/fragment_horizontal_margin"
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
@@ -23,7 +24,8 @@
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="575dp" />
+        app:layout_constraintTop_toBottomOf="@+id/checkedTextView"
+        android:layout_marginTop="24dp" />
 
     <EditText
         android:id="@+id/password"
@@ -37,28 +39,30 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="423dp" />
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        android:layout_marginTop="16dp" />
 
     <CheckedTextView
         android:id="@+id/checkedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:text="Forgot Password?"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="331dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:autofillHints="@string/prompt_email"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="366dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        android:layout_marginTop="32dp" />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -66,8 +70,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="gone"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -75,12 +81,9 @@
         android:layout_height="250dp"
         android:contentDescription="University Logo"
         android:src="@drawable/UT_Spartans_wordmark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
-
+        android:layout_marginTop="64dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

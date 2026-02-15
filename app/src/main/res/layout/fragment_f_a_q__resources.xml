@@ -5,53 +5,11 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".FAQ_Resources">
 
-    <!-- Header background (Fixed at top) -->
-    <View
-        android:id="@+id/header_bg"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:background="#0F000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/title_template"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:shadowColor="#000000"
-        android:shadowDx="6"
-        android:shadowDy="4"
-        android:shadowRadius="4"
-        android:text="U-PLAN"
-        android:textColor="#d22031"
-        android:textSize="55sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/header_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="56dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/UT_Spartans_wordmark" />
-
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="62dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Template Skeleton -->
+    <include layout="@layout/skeleton" />
 
     <!-- Search Bar -->
     <EditText
@@ -62,20 +20,20 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/search_bar_background"
         android:hint="Search questions or resources..."
-        android:textColorHint="#777777"
-        android:textColor="#333333"
         android:paddingHorizontal="16dp"
+        android:textColor="#333333"
+        android:textColorHint="#777777"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_bg" />
+        app:layout_constraintTop_toBottomOf="@id/header_bg" />
 
     <!-- FAQ SECTION CONTAINER -->
     <TextView
         android:id="@+id/faq_title_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Frequently Asked Questions"
         android:textColor="#d22031"
         android:textSize="22sp"
@@ -113,7 +71,7 @@
             android:paddingHorizontal="24dp"
             android:paddingBottom="16dp">
 
-            <!-- FAQ Item 1 -->
+            <!-- FAQ  Item 1-->
             <LinearLayout
                 android:id="@+id/faq_item_1"
                 android:layout_width="match_parent"
@@ -263,7 +221,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="426dp" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <!-- RESOURCES SECTION CONTAINER -->
     <TextView
@@ -296,7 +254,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:clipToPadding="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resources_divider_line">
