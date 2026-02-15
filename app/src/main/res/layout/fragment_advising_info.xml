@@ -4,48 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".AdvisingInfoFragment">
 
-    <Button
-        android:id="@+id/header_bg"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:backgroundTint="#07000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Template Skeleton -->
+    <include layout="@layout/skeleton" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:shadowColor="#000000"
-        android:shadowDx="6"
-        android:shadowDy="4"
-        android:shadowRadius="4"
-        android:text="U-PLAN"
-        android:textColor="#d22031"
-        android:textSize="55sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="56dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/UT_Spartans_wordmark" />
-
+    <!-- Advising Content -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_bg">
@@ -70,8 +40,9 @@
                 android:id="@+id/advising_steps_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="1. Log into Workday to check for holds.\n2. Review your degree audit.\n3. Schedule an appointment with your advisor.\n4. Prepare a list of potential classes.\n5. Meet with your advisor and get cleared for registration."
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:text="1. Log into Workday to check for holds.\n\n2. Review your degree audit.\n\n3. Schedule an appointment with your advisor.\n\n4. Prepare a list of potential classes.\n\n5. Meet with your advisor and get cleared for registration."
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -101,9 +72,10 @@
                 android:id="@+id/advisor_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="Name: Dr. John Smith"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_contact_title" />
 
@@ -111,7 +83,7 @@
                 android:id="@+id/advisor_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:text="Email: jsmith@ut.edu"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -129,18 +101,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="188dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#d22031"
-        android:text="Back"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

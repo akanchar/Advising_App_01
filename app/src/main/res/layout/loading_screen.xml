@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FFFFFF"
+    android:background="#FFFFFF"
     tools:context=".BlankFragment">
 
     <ImageView
@@ -58,7 +58,8 @@
         android:text="Login"
         android:textColor="#FFF"
         android:textSize="25sp"
-        tools:layout_editor_absoluteX="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="510dp" />
 
 

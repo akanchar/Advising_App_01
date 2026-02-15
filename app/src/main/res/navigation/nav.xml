@@ -22,33 +22,105 @@
         <action
             android:id="@+id/action_blankFragment3_to_loginFragment"
             app:destination="@id/LoginScreen" />
+        <action
+            android:id="@+id/action_StartingScreen_to_signupFragment"
+            app:destination="@id/signupFragment" />
     </fragment>
     <fragment
         android:id="@+id/ClassLayout"
         android:name="com.vanarsdale.makinganav.BlankFragment"
         android:label="loading_screen"
-        tools:layout="@layout/class_layout" />
+        tools:layout="@layout/class_layout" >
+        <action
+            android:id="@+id/action_ClassLayout_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+        <action
+            android:id="@+id/action_ClassLayout_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_ClassLayout_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_ClassLayout_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
+    </fragment>
     <fragment
         android:id="@+id/StudentProfile"
         android:name="com.vanarsdale.makinganav.StudentProfileFragment"
         android:label="student_profile"
-        tools:layout="@layout/studentprofile" >
-        <action
-            android:id="@+id/action_StudentLayout_to_ClassLayout3"
-            app:destination="@id/ClassLayout" />
+        tools:layout="@layout/fragment_studentprofile" >
         <action
             android:id="@+id/action_StudentProfile_to_AdvisingInfo"
             app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_StudentProfile_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_StudentProfile_to_how_To_Use2"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_StudentProfile_to_FAQ_Resources2"
+            app:destination="@id/FAQ_Resources" />
     </fragment>
     <fragment
         android:id="@+id/AdvisingInfo"
         android:name="com.vanarsdale.makinganav.AdvisingInfoFragment"
         android:label="fragment_advising_info"
-        tools:layout="@layout/fragment_advising_info" />
+        tools:layout="@layout/fragment_advising_info" >
+        <action
+            android:id="@+id/action_AdvisingInfo_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+        <action
+            android:id="@+id/action_AdvisingInfo_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_AdvisingInfo_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_AdvisingInfo_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
+    </fragment>
     <fragment
         android:id="@+id/FAQ_Resources"
         android:name="com.vanarsdale.makinganav.FAQ_Resources"
         android:label="fragment_f_a_q__resources"
-        tools:layout="@layout/fragment_f_a_q__resources" />
+        tools:layout="@layout/fragment_f_a_q__resources" >
+        <action
+            android:id="@+id/action_FAQ_Resources_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_FAQ_Resources_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_FAQ_Resources_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_FAQ_Resources_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/how_To_Use"
+        android:name="com.vanarsdale.makinganav.How_To_Use"
+        android:label="fragment_how__to__use"
+        tools:layout="@layout/fragment_how__to__use" >
+        <action
+            android:id="@+id/action_how_To_Use_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+        <action
+            android:id="@+id/action_how_To_Use_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_how_To_Use_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_how_To_Use_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.vanarsdale.makinganav.ui.signup.signupFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup" />
 
 </navigation>
