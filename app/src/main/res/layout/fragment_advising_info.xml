@@ -4,36 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".AdvisingInfoFragment">
 
-    <include
-        android:id="@+id/reusable_header"
-        layout="@layout/reusable_header"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Template Skeleton -->
+    <include layout="@layout/skeleton" />
 
+    <!-- Advising Content -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/fragment_vertical_margin"
-        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/reusable_header">
+        app:layout_constraintTop_toBottomOf="@id/header_bg">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/fragment_horizontal_margin">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/advising_steps_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/advising_steps_overview_title"
-                android:textColor="@color/brand_red"
-                android:textSize="@dimen/text_size_title"
+                android:text="Advising Steps Overview"
+                android:textColor="#d22031"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -42,9 +40,10 @@
                 android:id="@+id/advising_steps_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:text="@string/advising_steps_content"
-                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:text="1. Log into Workday to check for holds.\n\n2. Review your degree audit.\n\n3. Schedule an appointment with your advisor.\n\n4. Prepare a list of potential classes.\n\n5. Meet with your advisor and get cleared for registration."
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advising_steps_title" />
@@ -52,8 +51,8 @@
             <View
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/divider_height"
-                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
                 android:background="?android:attr/listDivider"
                 app:layout_constraintTop_toBottomOf="@id/advising_steps_content" />
 
@@ -61,10 +60,10 @@
                 android:id="@+id/advisor_contact_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:text="@string/advisor_contact_info_title"
-                android:textColor="@color/brand_red"
-                android:textSize="@dimen/text_size_title"
+                android:layout_marginTop="24dp"
+                android:text="Advisor Contact Info"
+                android:textColor="#d22031"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider" />
@@ -73,9 +72,10 @@
                 android:id="@+id/advisor_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:text="@string/advisor_name"
-                android:textSize="@dimen/text_size_body_2"
+                android:layout_marginTop="16dp"
+                android:text="Name: Dr. John Smith"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_contact_title" />
 
@@ -83,9 +83,9 @@
                 android:id="@+id/advisor_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_small"
-                android:text="@string/advisor_email"
-                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginTop="8dp"
+                android:text="Email: jsmith@ut.edu"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_name" />
 
@@ -93,26 +93,13 @@
                 android:id="@+id/advisor_office"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_small"
-                android:text="@string/advisor_office"
-                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginTop="4dp"
+                android:text="Office: Plant Hall 123"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_email" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="@dimen/button_width_small"
-        android:layout_height="@dimen/button_height_small"
-        android:layout_marginBottom="@dimen/fragment_vertical_margin"
-        android:backgroundTint="@color/brand_red"
-        android:text="@string/back"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_caption"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

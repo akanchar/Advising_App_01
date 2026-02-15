@@ -3,59 +3,93 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
-    <include
-        android:id="@+id/reusable_header"
-        layout="@layout/reusable_header"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Template Skeleton -->
+    <include layout="@layout/skeleton" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="@dimen/button_width_large"
-        android:layout_height="@dimen/button_height_medium"
-        android:backgroundTint="@color/semi_transparent_black"
-        android:contentDescription="@string/math_major_flowchart_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="142dp" />
-
-    <WebView
-        android:layout_width="@dimen/webview_width"
-        android:layout_height="@dimen/webview_height"
-        android:layout_marginEnd="@dimen/fragment_horizontal_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="8dp" />
-
-    <ImageView
-        android:id="@+id/imgMajorPath"
-        android:layout_width="@dimen/image_view_flowchart_width"
-        android:layout_height="@dimen/image_view_flowchart_height"
-        android:contentDescription="@string/math_major_flowchart_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57"
-        app:srcCompat="@drawable/mathclas" />
-
+    <!-- Subtitle -->
     <TextView
-        android:id="@+id/txtMajor"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:shadowColor="@color/black"
-        android:shadowDx="4"
-        android:shadowDy="4"
-        android:shadowRadius="4"
-        android:text="@string/math_major_flowchart_title"
-        android:textColor="@color/brand_red"
-        android:textSize="@dimen/text_size_headline"
+        android:layout_marginTop="16dp"
+        android:text="Math Major Flowchart"
+        android:textAlignment="center"
+        android:textColor="#d22031"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="162dp" />
+        app:layout_constraintTop_toBottomOf="@id/header_bg" />
+
+    <!-- Flowchart Scrollable Container -->
+    <ScrollView
+        android:id="@+id/verticalScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/legendContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSubtitle">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewFlowchart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/mathclas"
+                tools:layout_height="500dp"
+                tools:layout_width="800dp" />
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <!-- Legend Section -->
+    <LinearLayout
+        android:id="@+id/legendContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="4dp"
+            android:text="Completed"
+            android:textSize="12sp"
+            app:drawableStartCompat="@android:drawable/presence_online" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="4dp"
+            android:text="In Progress"
+            android:textSize="12sp"
+            app:drawableStartCompat="@android:drawable/presence_away" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:text="Required"
+            android:textSize="12sp"
+            app:drawableStartCompat="@android:drawable/presence_invisible" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
