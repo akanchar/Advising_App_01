@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="AdvisingInfo">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="637" />
+                            <option name="y" value="335" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="ClassLayout">
                     <value>
                       <LayoutPositions>
@@ -74,6 +86,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_StudentLayout_to_ClassLayout3">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_StudentProfile_to_AdvisingInfo">
                               <value>
                                 <LayoutPositions />
                               </value>

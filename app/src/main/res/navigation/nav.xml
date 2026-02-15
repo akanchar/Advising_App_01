@@ -24,18 +24,10 @@
             app:destination="@id/LoginScreen" />
     </fragment>
     <fragment
-        android:id="@+id/ClassLayout"
-        android:name="com.vanarsdale.makinganav.BlankFragment"
-        android:label="loading_screen"
-        tools:layout="@layout/class_layout" />
-    <fragment
         android:id="@+id/StudentProfile"
         android:name="com.vanarsdale.makinganav.StudentProfileFragment"
         android:label="student_profile"
         tools:layout="@layout/studentprofile" >
-        <action
-            android:id="@+id/action_StudentLayout_to_ClassLayout3"
-            app:destination="@id/ClassLayout" />
         <action
             android:id="@+id/action_StudentProfile_to_AdvisingInfo"
             app:destination="@id/AdvisingInfo" />

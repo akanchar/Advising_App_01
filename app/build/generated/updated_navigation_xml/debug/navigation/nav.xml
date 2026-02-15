@@ -1,0 +1,45 @@
+<navigation
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/nav.xml"
+app:startDestination="@id/StartingScreen" >
+<fragment
+    android:id="@+id/LoginScreen"
+    android:name="com.vanarsdale.makinganav.ui.login.LoginFragment"
+    android:label="fragment_login"
+    tools:layout="@layout/fragment_login" >
+
+    <action
+        android:id="@+id/action_loginFragment_to_mainActivity2"
+        app:destination="@id/StudentProfile" />
+
+</fragment>
+<fragment
+    android:id="@+id/StartingScreen"
+    android:name="com.vanarsdale.makinganav.BlankFragment"
+    android:label="loading_screen"
+    tools:layout="@layout/loading_screen" >
+
+    <action
+        android:id="@+id/action_blankFragment3_to_loginFragment"
+        app:destination="@id/LoginScreen" />
+
+</fragment>
+<fragment
+    android:id="@+id/StudentProfile"
+    android:name="com.vanarsdale.makinganav.StudentProfileFragment"
+    android:label="student_profile"
+    tools:layout="@layout/studentprofile" >
+
+    <action
+        android:id="@+id/action_StudentProfile_to_AdvisingInfo"
+        app:destination="@id/AdvisingInfo" />
+
+</fragment>
+<fragment
+    android:id="@+id/AdvisingInfo"
+    android:name="com.vanarsdale.makinganav.AdvisingInfoFragment"
+    android:label="fragment_advising_info"
+    tools:layout="@layout/fragment_advising_info" />
+</navigation>
