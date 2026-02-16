@@ -35,6 +35,8 @@
     <string name="transfer_student_prompt">Are you a transfer student?</string>
     <string name="see_graduation_plan">See graduation plan</string>
     <string name="find_your_advisor">Find your advisor</string>
+    <string name="add_major_button">+ Add another major</string>
+    <string name="add_minor_button">+ Add another minor</string>
 
     <!-- fragment_advising_info.xml -->
     <string name="advising_steps_overview_title">Advising Steps Overview</string>
@@ -95,4 +97,11 @@
     <string name="help_button_description">How to Use</string>
     <string name="faq_button_description">FAQ and Resources</string>
     <string name="profile_button_description">View Profile</string>
+
+    <!-- course completion page -->
+    <string name="course_completion_title">Course Completion</string>
+    <string name="select_course_label">Select Course</string>
+    <string name="select_semester_label">Select Semester</string>
+    <string name="add_course_button">ADD COURSE</string>
+    <string name="completed_courses_label">Completed Courses</string>
 </resources>

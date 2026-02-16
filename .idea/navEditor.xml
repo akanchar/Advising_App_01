@@ -13,9 +13,33 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-60" />
-                            <option name="y" value="507" />
+                            <option name="x" value="-186" />
+                            <option name="y" value="560" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_AdvisingInfo_to_ClassLayout">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_AdvisingInfo_to_FAQ_Resources">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_AdvisingInfo_to_StudentProfile">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_AdvisingInfo_to_how_To_Use">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -25,9 +49,79 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="205" />
-                            <option name="y" value="413" />
+                            <option name="x" value="93" />
+                            <option name="y" value="562" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_ClassLayout_to_AdvisingInfo">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_ClassLayout_to_CourseCompletion">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_ClassLayout_to_FAQ_Resources">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_ClassLayout_to_StudentProfile">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_ClassLayout_to_how_To_Use">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="CourseCompletion">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="220" />
+                            <option name="y" value="236" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_CourseCompletion_to_AdvisingInfo">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_CourseCompletion_to_ClassLayout">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_CourseCompletion_to_FAQ_Resources">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_CourseCompletion_to_StudentProfile">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_CourseCompletion_to_how_To_Use">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -37,9 +131,33 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="665" />
-                            <option name="y" value="492" />
+                            <option name="x" value="685" />
+                            <option name="y" value="590" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_FAQ_Resources_to_AdvisingInfo">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_FAQ_Resources_to_ClassLayout">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_FAQ_Resources_to_StudentProfile">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_FAQ_Resources_to_how_To_Use">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -55,6 +173,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_LoginScreen_to_forgotPasswordFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_loginFragment_to_mainActivity2">
                               <value>
                                 <LayoutPositions />
@@ -96,28 +219,33 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="278" />
-                            <option name="y" value="-50" />
+                            <option name="x" value="459" />
+                            <option name="y" value="-306" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_StudentLayout_to_ClassLayout3">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_StudentProfile_to_AdvisingInfo">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_StudentProfile_to_FAQ_Resources">
+                            <entry key="action_StudentProfile_to_ClassLayout">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_StudentProfile_to_how_To_Use">
+                            <entry key="action_StudentProfile_to_FAQ_Resources2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_StudentProfile_to_TransferInfo">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_StudentProfile_to_how_To_Use2">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -127,14 +255,91 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="TransferInfo">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="695" />
+                            <option name="y" value="-8" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_TransferInfo_to_AdvisingInfo">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_TransferInfo_to_ClassLayout">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_TransferInfo_to_FAQ_Resources">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_TransferInfo_to_StudentProfile">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_TransferInfo_to_how_To_Use">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="forgotPasswordFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="104" />
+                            <option name="y" value="-94" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="how_To_Use">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="441" />
-                            <option name="y" value="421" />
+                            <option name="x" value="420" />
+                            <option name="y" value="524" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_how_To_Use_to_AdvisingInfo">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_how_To_Use_to_ClassLayout">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_how_To_Use_to_FAQ_Resources">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_how_To_Use_to_StudentProfile">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

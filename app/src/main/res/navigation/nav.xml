@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_mainActivity2"
             app:destination="@id/StudentProfile" />
+        <action
+            android:id="@+id/action_LoginScreen_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/StartingScreen"
@@ -28,8 +31,8 @@
     </fragment>
     <fragment
         android:id="@+id/ClassLayout"
-        android:name="com.vanarsdale.makinganav.BlankFragment"
-        android:label="loading_screen"
+        android:name="com.vanarsdale.makinganav.ClassLayoutFragment"
+        android:label="class_layout"
         tools:layout="@layout/class_layout" >
         <action
             android:id="@+id/action_ClassLayout_to_StudentProfile"
@@ -43,6 +46,9 @@
         <action
             android:id="@+id/action_ClassLayout_to_FAQ_Resources"
             app:destination="@id/FAQ_Resources" />
+        <action
+            android:id="@+id/action_ClassLayout_to_CourseCompletion"
+            app:destination="@id/CourseCompletion" />
     </fragment>
     <fragment
         android:id="@+id/StudentProfile"
@@ -65,6 +71,9 @@
         <action
             android:id="@+id/action_StudentProfile_to_FAQ_Resources2"
             app:destination="@id/FAQ_Resources" />
+        <action
+            android:id="@+id/action_StudentProfile_to_TransferInfo"
+            app:destination="@id/TransferInfo" />
     </fragment>
     <fragment
         android:id="@+id/AdvisingInfo"
@@ -86,7 +95,7 @@
     </fragment>
     <fragment
         android:id="@+id/FAQ_Resources"
-        android:name="com.vanarsdale.makinganav.FAQ_Resources"
+        android:name="com.vanarsdale.makinganav.FAQResources"
         android:label="fragment_f_a_q__resources"
         tools:layout="@layout/fragment_f_a_q__resources" >
         <argument
@@ -131,5 +140,55 @@
         android:name="com.vanarsdale.makinganav.ui.signup.signupFragment"
         android:label="Sign Up"
         tools:layout="@layout/fragment_signup" />
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.vanarsdale.makinganav.ui.login.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password" />
+
+    <fragment
+        android:id="@+id/TransferInfo"
+        android:name="com.vanarsdale.makinganav.TransferInfoFragment"
+        android:label="Transfer Information"
+        tools:layout="@layout/fragment_transfer_info" >
+        <action
+            android:id="@+id/action_TransferInfo_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+        <action
+            android:id="@+id/action_TransferInfo_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_TransferInfo_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_TransferInfo_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_TransferInfo_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CourseCompletion"
+        android:name="com.vanarsdale.makinganav.CourseCompletionFragment"
+        android:label="Course Completion"
+        tools:layout="@layout/fragment_course_completion" >
+        <action
+            android:id="@+id/action_CourseCompletion_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
+    </fragment>
 
 </navigation>

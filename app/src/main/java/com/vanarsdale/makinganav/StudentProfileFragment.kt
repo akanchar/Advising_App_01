@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import androidx.appcompat.widget.SwitchCompat
 import androidx.navigation.fragment.findNavController
 
 class StudentProfileFragment : Fragment() {
@@ -15,6 +16,14 @@ class StudentProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_studentprofile, container, false)
+
+        // Handle Transfer Student Switch
+        val transferSwitch = view.findViewById<SwitchCompat>(R.id.switch_transfer)
+        transferSwitch?.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                findNavController().navigate(R.id.action_StudentProfile_to_TransferInfo)
+            }
+        }
 
         // The navigation buttons are part of the included skeleton.xml
         val advisorButton = view.findViewById<ImageButton>(R.id.btn_advisor)

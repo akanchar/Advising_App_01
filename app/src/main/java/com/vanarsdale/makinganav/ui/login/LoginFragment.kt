@@ -11,10 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.vanarsdale.makinganav.databinding.FragmentLoginBinding
 
 import com.vanarsdale.makinganav.R
@@ -48,6 +46,7 @@ class LoginFragment : Fragment() {
         val passwordEditText = binding.password
         val loginButton = binding.login
         val loadingProgressBar = binding.loading
+        val forgotPasswordText = binding.forgotPass
 
         loginViewModel.loginFormState.observe(
             viewLifecycleOwner,
@@ -112,11 +111,17 @@ class LoginFragment : Fragment() {
                 passwordEditText.text.toString()
             )
         }
+
+        forgotPasswordText.setOnClickListener {
+            findNavController().navigate(R.id.action_LoginScreen_to_forgotPasswordFragment)
+        }
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome) + model.displayName
-        // TODO : initiate successful logged in experience
+        // Navigate to student profile upon successful login
+        findNavController().navigate(R.id.action_loginFragment_to_mainActivity2)
+        
         val appContext = context?.applicationContext ?: return
         Toast.makeText(appContext, welcome, Toast.LENGTH_LONG).show()
     }

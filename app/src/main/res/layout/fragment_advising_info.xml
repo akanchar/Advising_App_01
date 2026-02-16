@@ -99,6 +99,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_email" />
 
+            <Button
+                android:id="@+id/btn_contact_advisor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:backgroundTint="@color/brand_red"
+                android:text="Email Advisor"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/advisor_office"
+                app:icon="@android:drawable/ic_dialog_email"
+                app:iconTint="@color/white" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
