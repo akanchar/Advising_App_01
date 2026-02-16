@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/utampaLOGO"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/UT_Spartans_wordmark" />
 
     <TextView
-        android:id="@+id/textViewAppName"
+        android:id="@+id/UplanID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="U-PLAN"

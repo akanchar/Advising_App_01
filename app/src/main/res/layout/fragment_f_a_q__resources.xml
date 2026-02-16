@@ -88,7 +88,9 @@
                     android:focusable="true"
                     android:orientation="horizontal"
                     android:padding="12dp">
+
                     <TextView
+                        android:id="@+id/faq_one"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -132,7 +134,9 @@
                     android:focusable="true"
                     android:orientation="horizontal"
                     android:padding="12dp">
+
                     <TextView
+                        android:id="@+id/faq_two"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -176,7 +180,9 @@
                     android:focusable="true"
                     android:orientation="horizontal"
                     android:padding="12dp">
+
                     <TextView
+                        android:id="@+id/faq_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -283,7 +289,9 @@
                     android:focusable="true"
                     android:orientation="horizontal"
                     android:padding="12dp">
+
                     <TextView
+                        android:id="@+id/resource1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -327,7 +335,9 @@
                     android:focusable="true"
                     android:orientation="horizontal"
                     android:padding="12dp">
+
                     <TextView
+                        android:id="@+id/resource2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -371,7 +381,9 @@
                     android:focusable="true"
                     android:orientation="horizontal"
                     android:padding="12dp">
+
                     <TextView
+                        android:id="@+id/resource3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

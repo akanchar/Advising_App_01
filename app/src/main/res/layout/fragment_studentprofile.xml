@@ -28,7 +28,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/studentProfileTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
@@ -39,11 +39,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/majorTEXT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Major"
-                android:textStyle="bold"
-                android:textColor="#333333" />
+                android:textColor="#333333"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spinner_major"
@@ -53,11 +54,12 @@
                 android:background="@android:drawable/btn_dropdown" />
 
             <TextView
+                android:id="@+id/MinorText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Minor"
-                android:textStyle="bold"
-                android:textColor="#333333" />
+                android:textColor="#333333"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spinner_minor"
@@ -67,11 +69,12 @@
                 android:background="@android:drawable/btn_dropdown" />
 
             <TextView
+                android:id="@+id/graduationDateText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Graduation Date"
-                android:textStyle="bold"
-                android:textColor="#333333" />
+                android:textColor="#333333"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextDate"
