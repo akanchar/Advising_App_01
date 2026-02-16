@@ -20,6 +20,8 @@
         android:layout_marginTop="@dimen/spacing_xlarge"
         android:background="@drawable/search_bar_background"
         android:hint="@string/search_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
         android:paddingHorizontal="@dimen/spacing_xlarge"
         android:textColor="@color/medium_gray"
         android:textColorHint="@color/text_color_hint"
