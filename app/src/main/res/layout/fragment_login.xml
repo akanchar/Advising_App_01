@@ -20,11 +20,11 @@
         android:layout_gravity="start"
         android:backgroundTint="#d22031"
         android:enabled="false"
-        android:text="@string/action_sign_in"
+        android:text="Login"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPass"
         android:layout_marginTop="24dp" />
 
     <EditText
@@ -39,11 +39,11 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         android:layout_marginTop="16dp" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView"
+        android:id="@+id/forgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
@@ -52,7 +52,7 @@
         android:layout_marginTop="16dp" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="331dp"
         android:layout_height="wrap_content"
         android:autofillHints="@string/prompt_email"
@@ -61,7 +61,7 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        app:layout_constraintTop_toBottomOf="@+id/utampaLOGO"
         android:layout_marginTop="32dp" />
 
     <ProgressBar
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/utampaLOGO"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:contentDescription="University Logo"

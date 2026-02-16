@@ -53,13 +53,16 @@
 
             <!-- Step 1 -->
             <TextView
+                android:id="@+id/openingApp_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1. Opening the App"
                 android:textColor="#333333"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/openingApp_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -70,13 +73,16 @@
 
             <!-- Step 2 -->
             <TextView
+                android:id="@+id/navigatingApp_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2. Navigating the Main Menu"
                 android:textColor="#333333"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/navigatingApp_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -87,13 +93,16 @@
 
             <!-- Step 3 -->
             <TextView
+                android:id="@+id/performingAction_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3. Performing the Main Action"
                 android:textColor="#333333"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/performingAction_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -104,13 +113,16 @@
 
             <!-- Step 4 -->
             <TextView
+                android:id="@+id/saving_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4. Saving or Submitting"
                 android:textColor="#333333"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/saving_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -121,13 +133,16 @@
 
             <!-- Step 5 -->
             <TextView
+                android:id="@+id/loggingOut_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5. Logging Out"
                 android:textColor="#333333"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/loggingOut_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
