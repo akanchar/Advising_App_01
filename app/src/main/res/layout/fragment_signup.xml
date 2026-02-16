@@ -22,7 +22,7 @@
         android:layout_marginTop="@dimen/spacing_large" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:autofillHints="@string/prompt_email"
@@ -32,7 +32,7 @@
         android:minHeight="@dimen/min_touch_target_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
         android:layout_marginTop="@dimen/fragment_vertical_margin" />
 
     <CheckedTextView
@@ -57,7 +57,7 @@
         android:minHeight="@dimen/min_touch_target_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         android:layout_marginTop="@dimen/fragment_vertical_margin" />
 
     <ProgressBar
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/UTLogo"
         android:layout_width="@dimen/image_view_logo_size"
         android:layout_height="@dimen/image_view_logo_size"
         android:contentDescription="@string/university_logo_description"
@@ -83,7 +83,7 @@
         android:layout_marginTop="@dimen/spacing_xlarge" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/firstName"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -92,11 +92,11 @@
         android:hint="@string/prompt_first_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        app:layout_constraintTop_toBottomOf="@+id/UTLogo"
         android:layout_marginTop="@dimen/spacing_large" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/lastName"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -105,7 +105,7 @@
         android:minHeight="@dimen/min_touch_target_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
         android:layout_marginTop="@dimen/fragment_vertical_margin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

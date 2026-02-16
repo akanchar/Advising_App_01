@@ -20,7 +20,7 @@
         android:layout_gravity="start"
         android:backgroundTint="@color/brand_red"
         android:enabled="false"
-        android:text="@string/action_sign_in"
+        android:text="Login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         android:minHeight="@dimen/min_touch_target_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         android:layout_marginTop="@dimen/fragment_vertical_margin" />
 
     <CheckedTextView
@@ -53,7 +53,7 @@
         android:layout_marginTop="@dimen/fragment_vertical_margin" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:autofillHints="@string/prompt_email"
@@ -63,7 +63,7 @@
         android:minHeight="@dimen/min_touch_target_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        app:layout_constraintTop_toBottomOf="@+id/UTLogo"
         android:layout_marginTop="@dimen/spacing_xlarge" />
 
     <ProgressBar
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/UTLogo"
         android:layout_width="@dimen/image_view_logo_size"
         android:layout_height="@dimen/image_view_logo_size"
         android:contentDescription="@string/university_logo_description"

@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/UTLogo"
         android:layout_width="@dimen/header_logo_size"
         android:layout_height="@dimen/header_logo_size"
         android:layout_marginStart="@dimen/spacing_medium"
