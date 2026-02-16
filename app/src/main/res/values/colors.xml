@@ -3,5 +3,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="brand_red">#d22031</color>
+    <color name="brand_red_dark">#D52F3C</color>
+    <color name="maroon">#800000</color>
     <color name="semi_transparent_black">#07000000</color>
+    <color name="black_transparent_25">#40000000</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#555555</color>
+    <color name="medium_gray">#333333</color>
+    <color name="off_white">#666666</color>
+    <color name="light_gray_2">#DDDDDD</color>
+    <color name="dark_gray_2">#686666</color>
+    <color name="text_color_hint">#777777</color>
 </resources>

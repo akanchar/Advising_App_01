@@ -1,40 +1,98 @@
 <resources>
+    <string name="app_name">Making A Nav</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 
-    <!-- General Text -->
+    <!-- General -->
     <string name="u_plan_title">U-PLAN</string>
     <string name="university_logo_description">University Logo</string>
 
-    <!-- Text for class_layout.xml -->
+    <!-- class_layout.xml -->
     <string name="math_major_flowchart_title">Math Major Flowchart</string>
+    <string name="legend_completed">Completed</string>
+    <string name="legend_in_progress">In Progress</string>
+    <string name="legend_required">Required</string>
 
-    <!-- Text for fragment_login.xml -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
+    <!-- fragment_login.xml -->
     <string name="forgot_password">Forgot Password?</string>
-    <string name="action_sign_in_short">Sign In</string>
 
-
-    <!-- Text for loading_screen.xml -->
+    <!-- loading_screen.xml -->
     <string name="sign_up">Sign Up</string>
     <string name="login">Login</string>
 
-    <!-- Text for studentprofile.xml -->
+    <!-- studentprofile.xml -->
     <string name="select_graduation_date">Select Graduation Date</string>
     <string name="graduate_student_prompt">Are you a graduate student?</string>
     <string name="transfer_student_prompt">Are you a transfer student?</string>
     <string name="see_graduation_plan">See graduation plan</string>
     <string name="find_your_advisor">Find your advisor</string>
 
-    <!-- Text for fragment_advising_info.xml -->
+    <!-- fragment_advising_info.xml -->
     <string name="advising_steps_overview_title">Advising Steps Overview</string>
-    <string name="advising_steps_content">1. Log into Workday to check for holds.
-2. Review your degree audit.
-3. Schedule an appointment with your advisor.
-4. Prepare a list of potential classes.
-5. Meet with your advisor and get cleared for registration.</string>
+    <string name="advising_steps_content">1. Log into Workday to check for holds.\n\n2. Review your degree audit.\n\n3. Schedule an appointment with your advisor.\n\n4. Prepare a list of potential classes.\n\n5. Meet with your advisor and get cleared for registration.</string>
     <string name="advisor_contact_info_title">Advisor Contact Info</string>
     <string name="advisor_name">Name: Dr. John Smith</string>
     <string name="advisor_email">Email: jsmith@ut.edu</string>
     <string name="advisor_office">Office: Plant Hall 123</string>
     <string name="back">Back</string>
+
+    <!-- fragment_signup.xml -->
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
+
+    <!-- fragment_how__to__use.xml -->
+    <string name="how_to_use_title">How To Use This App</string>
+    <string name="how_to_use_intro">Welcome to U-Plan! This application is designed to help you navigate your academic advising journey with ease, providing quick access to FAQs and campus resources.</string>
+    <string name="step_1_title">1. Opening the App</string>
+    <string name="step_1_text">Locate the U-Plan icon on your home screen and tap it to launch the application.</string>
+    <string name="step_2_title">2. Navigating the Main Menu</string>
+    <string name="step_2_text">Use the navigation bar at the bottom or the menu icon to switch between Advising Info, FAQs, and Resources.</string>
+    <string name="step_3_title">3. Performing the Main Action</string>
+    <string name="step_3_text">Tap on any question or resource title to expand the section and view detailed information.</string>
+    <string name="step_4_title">4. Saving or Submitting</string>
+    <string name="step_4_text">If you fill out any forms or make changes, ensure you tap \'Save\' or \'Submit\' at the bottom of the page.</string>
+    <string name="step_5_title">5. Logging Out</string>
+    <string name="step_5_text">To exit, you can simply close the app or find the \'Logout\' option in your profile settings.</string>
+
+    <!-- fragment_studentprofile.xml -->
+    <string name="student_profile_title">Student Profile</string>
+    <string name="major_label">Major</string>
+    <string name="minor_label">Minor</string>
+    <string name="graduation_date_label">Graduation Date</string>
+    <string name="date_hint">MM/DD/YYYY</string>
+    <string name="save_profile_button">Save Profile</string>
+
+    <!-- fragment_f_a_q__resources.xml -->
+    <string name="search_hint">Search questions or resources...</string>
+    <string name="faq_title">Frequently Asked Questions</string>
+    <string name="faq_1_title">How do I schedule an appointment?</string>
+    <string name="faq_1_content">You can schedule an appointment through the main dashboard by clicking the \'Schedule\' button and selecting an available time slot.</string>
+    <string name="faq_2_title">Where can I find my student ID?</string>
+    <string name="faq_2_content">Your student ID is located on your physical Spartan Card or can be viewed in the \'Student Profile\' section of this app.</string>
+    <string name="faq_3_title">How do I change my major?</string>
+    <string name="faq_3_content">To change your major, you must meet with your current academic advisor to complete the necessary paperwork and obtain approval.</string>
+    <string name="resources_title">Resources</string>
+    <string name="resource_1_title">Campus Health Center</string>
+    <string name="resource_1_content">The Health Center provides primary care, immunizations, and wellness education. Located near the North Residence Hall.</string>
+    <string name="resource_2_title">Career Services</string>
+    <string name="resource_2_content">Offers resume help, internship searches, and interview prep. Find them in the Student Center, 2nd floor.</string>
+    <string name="resource_3_title">Spartan Support</string>
+    <string name="resource_3_content">Provides counseling, financial aid assistance, and academic tutoring resources for all students.</string>
+    <string name="expand_collapse_description">Toggle section</string>
+
+    <!-- skeleton.xml -->
+    <string name="flowchart_button_description">View Flowchart</string>
+    <string name="advisor_button_description">Contact Advisor</string>
+    <string name="help_button_description">How to Use</string>
+    <string name="faq_button_description">FAQ and Resources</string>
+    <string name="profile_button_description">View Profile</string>
 </resources>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/white">
 
     <!-- Template Skeleton -->
     <include layout="@layout/skeleton" />
@@ -15,7 +15,7 @@
         android:id="@+id/profile_scrollview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="16dp"
+        android:padding="@dimen/fragment_horizontal_margin"
         android:clipToPadding="false"
         app:layout_constraintTop_toBottomOf="@id/header_bg"
         app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
@@ -31,82 +31,83 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:text="Student Profile"
+                android:layout_marginBottom="@dimen/spacing_xxlarge"
+                android:text="@string/student_profile_title"
                 android:textAlignment="center"
-                android:textColor="#d22031"
-                android:textSize="32sp"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/text_size_headline"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Major"
+                android:text="@string/major_label"
                 android:textStyle="bold"
-                android:textColor="#333333" />
+                android:textColor="@color/medium_gray" />
 
             <Spinner
                 android:id="@+id/spinner_major"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="16dp"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
                 android:background="@android:drawable/btn_dropdown" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Minor"
+                android:text="@string/minor_label"
                 android:textStyle="bold"
-                android:textColor="#333333" />
+                android:textColor="@color/medium_gray" />
 
             <Spinner
                 android:id="@+id/spinner_minor"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="16dp"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
                 android:background="@android:drawable/btn_dropdown" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Graduation Date"
+                android:text="@string/graduation_date_label"
                 android:textStyle="bold"
-                android:textColor="#333333" />
+                android:textColor="@color/medium_gray" />
 
             <EditText
                 android:id="@+id/editTextDate"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="24dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginBottom="@dimen/spacing_xxlarge"
                 android:ems="10"
-                android:hint="MM/DD/YYYY"
+                android:hint="@string/date_hint"
                 android:inputType="date"
-                android:textColor="#000000" />
+                android:textColor="@color/black"/>
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_transfer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:text="Are you a transfer student?"
-                android:textSize="16sp"
-                android:textColor="#333333" />
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:text="@string/transfer_student_prompt"
+                android:textSize="@dimen/text_size_body_1"
+                android:textColor="@color/medium_gray" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_graduate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:text="Are you a graduate student?"
-                android:textSize="16sp"
-                android:textColor="#333333" />
+                android:layout_marginBottom="@dimen/spacing_xxxlarge"
+                android:text="@string/graduate_student_prompt"
+                android:textSize="@dimen/text_size_body_1"
+                android:textColor="@color/medium_gray" />
 
             <Button
                 android:id="@+id/btn_save_profile"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:backgroundTint="#d22031"
-                android:text="Save Profile"
+                android:layout_width="@dimen/button_width_regular"
+                android:layout_height="@dimen/button_save_profile_height"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/brand_red"
+                android:text="@string/save_profile_button"
                 android:textColor="@color/white" />
 
         </LinearLayout>

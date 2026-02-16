@@ -28,17 +28,54 @@
 
     <!-- Text sizes -->
     <dimen name="text_size_display">55sp</dimen>
-    <dimen name="text_size_headline">30sp</dimen>
-    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_headline">32sp</dimen>
+    <dimen name="text_size_title">22sp</dimen>
     <dimen name="text_size_subhead">20sp</dimen>
     <dimen name="text_size_body_2">18sp</dimen>
     <dimen name="text_size_body_1">16sp</dimen>
-    <dimen name="text_size_caption">15sp</dimen>
+    <dimen name="text_size_caption">14sp</dimen>
     <dimen name="text_size_button">25sp</dimen>
+    <dimen name="text_size_app_name">36sp</dimen>
+    <dimen name="text_size_small_caption">12sp</dimen>
 
     <!-- Spacing -->
     <dimen name="spacing_small">4dp</dimen>
     <dimen name="spacing_medium">8dp</dimen>
-    <dimen name="spacing_large">24dp</dimen>
-    <dimen name="divider_height">1dp</dimen>
+    <dimen name="spacing_large">12dp</dimen>
+    <dimen name="spacing_xlarge">16dp</dimen>
+    <dimen name="spacing_xxlarge">24dp</dimen>
+    <dimen name="spacing_xxxlarge">32dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+
+    <!-- skeleton.xml dimensions -->
+    <dimen name="header_height">85dp</dimen>
+    <dimen name="header_logo_size">60dp</dimen>
+    <dimen name="shadow_offset">4dp</dimen>
+    <dimen name="shadow_radius">4dp</dimen>
+    <dimen name="bottom_nav_height">70dp</dimen>
+    <dimen name="center_button_size">80dp</dimen>
+    <dimen name="center_button_margin_bottom">5dp</dimen>
+    <dimen name="center_button_corner_radius">40dp</dimen>
+    <dimen name="center_button_elevation">12dp</dimen>
+
+    <!-- class_layout.xml dimensions -->
+    <dimen name="drawable_padding">4dp</dimen>
+
+    <!-- loading_screen.xml dimensions -->
+    <dimen name="shadow_dx">6dp</dimen>
+    <dimen name="shadow_dy">4dp</dimen>
+
+    <!-- fragment_advising_info.xml dimensions -->
+    <dimen name="line_spacing_extra">4dp</dimen>
+
+    <!-- fragment_studentprofile.xml dimensions -->
+    <dimen name="spinner_height">48dp</dimen>
+    <dimen name="edit_text_height">48dp</dimen>
+    <dimen name="button_save_profile_height">60dp</dimen>
+
+    <!-- fragment_f_a_q__resources.xml dimensions -->
+    <dimen name="search_bar_height">48dp</dimen>
+    <dimen name="arrow_icon_size">20dp</dimen>
+    <dimen name="separator_height">4dp</dimen>
+    <dimen name="min_touch_target_size">48dp</dimen>
 </resources>
