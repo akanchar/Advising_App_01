@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:context=".FAQ_Resources">
 
     <!-- Template Skeleton -->
@@ -15,15 +15,15 @@
     <EditText
         android:id="@+id/search_bar"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="@dimen/search_bar_height"
+        android:layout_marginHorizontal="@dimen/spacing_xxlarge"
+        android:layout_marginTop="@dimen/spacing_xlarge"
         android:background="@drawable/search_bar_background"
-        android:hint="Search questions or resources..."
-        android:paddingHorizontal="16dp"
-        android:textColor="#333333"
-        android:textColorHint="#777777"
-        android:textSize="16sp"
+        android:hint="@string/search_hint"
+        android:paddingHorizontal="@dimen/spacing_xlarge"
+        android:textColor="@color/medium_gray"
+        android:textColorHint="@color/text_color_hint"
+        android:textSize="@dimen/text_size_body_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_bg" />
@@ -33,87 +33,81 @@
         android:id="@+id/faq_title_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Frequently Asked Questions"
-        android:textColor="#d22031"
-        android:textSize="22sp"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:text="@string/faq_title"
+        android:textColor="@color/brand_red"
+        android:textSize="@dimen/text_size_title"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+        app:layout_constraintTop_toBottomOf="@id/search_bar" />
 
     <View
         android:id="@+id/faq_divider"
         android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="8dp"
-        android:background="#686666"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginHorizontal="@dimen/spacing_xxxlarge"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@color/dark_gray_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/faq_title_label" />
+        app:layout_constraintTop_toBottomOf="@id/faq_title_label" />
 
     <ScrollView
         android:id="@+id/faq_scroll_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/spacing_medium"
         android:clipToPadding="false"
         app:layout_constraintBottom_toTopOf="@+id/section_separator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/faq_divider">
+        app:layout_constraintTop_toBottomOf="@id/faq_divider">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="24dp"
-            android:paddingBottom="16dp">
+            android:paddingHorizontal="@dimen/spacing_xxlarge"
+            android:paddingBottom="@dimen/spacing_xlarge">
 
-            <!-- FAQ  Item 1-->
+            <!-- FAQ Item 1-->
             <LinearLayout
                 android:id="@+id/faq_item_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/spacing_medium"
                 android:background="@drawable/faq_item_background"
                 android:orientation="vertical"
-                android:padding="2dp">
-                <LinearLayout
+                android:padding="@dimen/spacing_small">
+
+                <TextView
                     android:id="@+id/faq_header_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
+                    android:drawablePadding="@dimen/spacing_medium"
                     android:focusable="true"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_touch_target_size"
+                    android:padding="@dimen/spacing_large"
+                    android:text="@string/faq_1_title"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="@dimen/text_size_body_1"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@android:drawable/arrow_down_float"
+                    app:drawableTint="@color/off_white" />
 
-                    <TextView
-                        android:id="@+id/faq_one"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="How do I schedule an appointment?"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:id="@+id/faq_arrow_1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/arrow_down_float"
-                        app:tint="#666666" />
-                </LinearLayout>
                 <TextView
                     android:id="@+id/faq_content_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="12dp"
-                    android:paddingBottom="12dp"
-                    android:text="You can schedule an appointment through the main dashboard by clicking the 'Schedule' button and selecting an available time slot."
-                    android:textColor="#555555"
-                    android:textSize="14sp"
+                    android:paddingHorizontal="@dimen/spacing_large"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:text="@string/faq_1_content"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_caption"
                     android:visibility="gone" />
             </LinearLayout>
 
@@ -122,44 +116,38 @@
                 android:id="@+id/faq_item_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/spacing_large"
                 android:background="@drawable/faq_item_background"
                 android:orientation="vertical"
-                android:padding="2dp">
-                <LinearLayout
+                android:padding="@dimen/spacing_small">
+
+                <TextView
                     android:id="@+id/faq_header_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
+                    android:drawablePadding="@dimen/spacing_medium"
                     android:focusable="true"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_touch_target_size"
+                    android:padding="@dimen/spacing_large"
+                    android:text="@string/faq_2_title"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="@dimen/text_size_body_1"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@android:drawable/arrow_down_float"
+                    app:drawableTint="@color/off_white" />
 
-                    <TextView
-                        android:id="@+id/faq_two"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Where can I find my student ID?"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:id="@+id/faq_arrow_2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/arrow_down_float"
-                        app:tint="#666666" />
-                </LinearLayout>
                 <TextView
                     android:id="@+id/faq_content_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="12dp"
-                    android:paddingBottom="12dp"
-                    android:text="Your student ID is located on your physical Spartan Card or can be viewed in the 'Student Profile' section of this app."
-                    android:textColor="#555555"
-                    android:textSize="14sp"
+                    android:paddingHorizontal="@dimen/spacing_large"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:text="@string/faq_2_content"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_caption"
                     android:visibility="gone" />
             </LinearLayout>
 
@@ -168,44 +156,38 @@
                 android:id="@+id/faq_item_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/spacing_large"
                 android:background="@drawable/faq_item_background"
                 android:orientation="vertical"
-                android:padding="2dp">
-                <LinearLayout
+                android:padding="@dimen/spacing_small">
+
+                <TextView
                     android:id="@+id/faq_header_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
+                    android:drawablePadding="@dimen/spacing_medium"
                     android:focusable="true"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_touch_target_size"
+                    android:padding="@dimen/spacing_large"
+                    android:text="@string/faq_3_title"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="@dimen/text_size_body_1"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@android:drawable/arrow_down_float"
+                    app:drawableTint="@color/off_white" />
 
-                    <TextView
-                        android:id="@+id/faq_3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="How do I change my major?"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:id="@+id/faq_arrow_3"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/arrow_down_float"
-                        app:tint="#666666" />
-                </LinearLayout>
                 <TextView
                     android:id="@+id/faq_content_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="12dp"
-                    android:paddingBottom="12dp"
-                    android:text="To change your major, you must meet with your current academic advisor to complete the necessary paperwork and obtain approval."
-                    android:textColor="#555555"
-                    android:textSize="14sp"
+                    android:paddingHorizontal="@dimen/spacing_large"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:text="@string/faq_3_content"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_caption"
                     android:visibility="gone" />
             </LinearLayout>
 
@@ -216,8 +198,8 @@
     <View
         android:id="@+id/section_separator"
         android:layout_width="0dp"
-        android:layout_height="4dp"
-        android:background="#DDDDDD"
+        android:layout_height="@dimen/separator_height"
+        android:background="@color/light_gray_2"
         app:layout_constraintBottom_toTopOf="@+id/guideline_middle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -234,31 +216,31 @@
         android:id="@+id/resources_title_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Resources"
-        android:textColor="#d22031"
-        android:textSize="22sp"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:text="@string/resources_title"
+        android:textColor="@color/brand_red"
+        android:textSize="@dimen/text_size_title"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_middle" />
+        app:layout_constraintTop_toBottomOf="@id/guideline_middle" />
 
     <View
         android:id="@+id/resources_divider_line"
         android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="8dp"
-        android:background="#686666"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginHorizontal="@dimen/spacing_xxxlarge"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@color/dark_gray_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resources_title_label" />
+        app:layout_constraintTop_toBottomOf="@id/resources_title_label" />
 
     <ScrollView
         android:id="@+id/res_scroll_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/spacing_medium"
         android:clipToPadding="false"
         app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -269,52 +251,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="24dp"
-            android:paddingBottom="32dp">
+            android:paddingHorizontal="@dimen/spacing_xxlarge"
+            android:paddingBottom="@dimen/spacing_xxxlarge">
 
             <!-- Resource Item 1 -->
             <LinearLayout
                 android:id="@+id/res_item_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/spacing_medium"
                 android:background="@drawable/faq_item_background"
                 android:orientation="vertical"
-                android:padding="2dp">
-                <LinearLayout
+                android:padding="@dimen/spacing_small">
+
+                <TextView
                     android:id="@+id/res_header_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
+                    android:drawablePadding="@dimen/spacing_medium"
                     android:focusable="true"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_touch_target_size"
+                    android:padding="@dimen/spacing_large"
+                    android:text="@string/resource_1_title"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="@dimen/text_size_body_1"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@android:drawable/arrow_down_float"
+                    app:drawableTint="@color/off_white" />
 
-                    <TextView
-                        android:id="@+id/resource1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Campus Health Center"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:id="@+id/res_arrow_1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/arrow_down_float"
-                        app:tint="#666666" />
-                </LinearLayout>
                 <TextView
                     android:id="@+id/res_content_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="12dp"
-                    android:paddingBottom="12dp"
-                    android:text="The Health Center provides primary care, immunizations, and wellness education. Located near the North Residence Hall."
-                    android:textColor="#555555"
-                    android:textSize="14sp"
+                    android:paddingHorizontal="@dimen/spacing_large"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:text="@string/resource_1_content"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_caption"
                     android:visibility="gone" />
             </LinearLayout>
 
@@ -323,44 +299,38 @@
                 android:id="@+id/res_item_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/spacing_large"
                 android:background="@drawable/faq_item_background"
                 android:orientation="vertical"
-                android:padding="2dp">
-                <LinearLayout
+                android:padding="@dimen/spacing_small">
+
+                <TextView
                     android:id="@+id/res_header_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
+                    android:drawablePadding="@dimen/spacing_medium"
                     android:focusable="true"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_touch_target_size"
+                    android:padding="@dimen/spacing_large"
+                    android:text="@string/resource_2_title"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="@dimen/text_size_body_1"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@android:drawable/arrow_down_float"
+                    app:drawableTint="@color/off_white" />
 
-                    <TextView
-                        android:id="@+id/resource2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Career Services"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:id="@+id/res_arrow_2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/arrow_down_float"
-                        app:tint="#666666" />
-                </LinearLayout>
                 <TextView
                     android:id="@+id/res_content_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="12dp"
-                    android:paddingBottom="12dp"
-                    android:text="Offers resume help, internship searches, and interview prep. Find them in the Student Center, 2nd floor."
-                    android:textColor="#555555"
-                    android:textSize="14sp"
+                    android:paddingHorizontal="@dimen/spacing_large"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:text="@string/resource_2_content"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_caption"
                     android:visibility="gone" />
             </LinearLayout>
 
@@ -369,44 +339,38 @@
                 android:id="@+id/res_item_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/spacing_large"
                 android:background="@drawable/faq_item_background"
                 android:orientation="vertical"
-                android:padding="2dp">
-                <LinearLayout
+                android:padding="@dimen/spacing_small">
+
+                <TextView
                     android:id="@+id/res_header_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
+                    android:drawablePadding="@dimen/spacing_medium"
                     android:focusable="true"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_touch_target_size"
+                    android:padding="@dimen/spacing_large"
+                    android:text="@string/resource_3_title"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="@dimen/text_size_body_1"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@android:drawable/arrow_down_float"
+                    app:drawableTint="@color/off_white" />
 
-                    <TextView
-                        android:id="@+id/resource3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Spartan Support"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:id="@+id/res_arrow_3"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/arrow_down_float"
-                        app:tint="#666666" />
-                </LinearLayout>
                 <TextView
                     android:id="@+id/res_content_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="12dp"
-                    android:paddingBottom="12dp"
-                    android:text="Provides counseling, financial aid assistance, and academic tutoring resources for all students."
-                    android:textColor="#555555"
-                    android:textSize="14sp"
+                    android:paddingHorizontal="@dimen/spacing_large"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:text="@string/resource_3_content"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_caption"
                     android:visibility="gone" />
             </LinearLayout>
 

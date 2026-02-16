@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:context=".How_To_Use">
 
     <!-- Template Skeleton -->
@@ -15,10 +15,10 @@
         android:id="@+id/how_to_use_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="How To Use This App"
-        android:textColor="#d22031"
-        android:textSize="28sp"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:text="@string/how_to_use_title"
+        android:textColor="@color/brand_red"
+        android:textSize="@dimen/text_size_title"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,21 +29,21 @@
         android:id="@+id/how_to_use_intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginHorizontal="20dp"
-        android:text="Welcome to U-Plan! This application is designed to help you navigate your academic advising journey with ease, providing quick access to FAQs and campus resources."
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginHorizontal="@dimen/spacing_xxlarge"
+        android:text="@string/how_to_use_intro"
         android:textAlignment="center"
-        android:textColor="#555555"
-        android:textSize="16sp"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/text_size_body_1"
         app:layout_constraintTop_toBottomOf="@id/how_to_use_title" />
 
     <!-- Scrollable container for instructions -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginVertical="16dp"
-        android:paddingHorizontal="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bg"
+        android:layout_marginVertical="@dimen/spacing_xlarge"
+        android:paddingHorizontal="@dimen/spacing_xxxlarge"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
         app:layout_constraintTop_toBottomOf="@id/how_to_use_intro">
 
         <LinearLayout
@@ -56,100 +56,100 @@
                 android:id="@+id/openingApp_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1. Opening the App"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:text="@string/step_1_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/openingApp_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:text="Locate the U-Plan icon on your home screen and tap it to launch the application."
-                android:textColor="#666666"
-                android:textSize="15sp" />
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_1_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
 
             <!-- Step 2 -->
             <TextView
                 android:id="@+id/navigatingApp_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2. Navigating the Main Menu"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:text="@string/step_2_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/navigatingApp_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:text="Use the navigation bar at the bottom or the menu icon to switch between Advising Info, FAQs, and Resources."
-                android:textColor="#666666"
-                android:textSize="15sp" />
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_2_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
 
             <!-- Step 3 -->
             <TextView
                 android:id="@+id/performingAction_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3. Performing the Main Action"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:text="@string/step_3_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/performingAction_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:text="Tap on any question or resource title to expand the section and view detailed information."
-                android:textColor="#666666"
-                android:textSize="15sp" />
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_3_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
 
             <!-- Step 4 -->
             <TextView
                 android:id="@+id/saving_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4. Saving or Submitting"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:text="@string/step_4_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/saving_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:text="If you fill out any forms or make changes, ensure you tap 'Save' or 'Submit' at the bottom of the page."
-                android:textColor="#666666"
-                android:textSize="15sp" />
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_4_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
 
             <!-- Step 5 -->
             <TextView
                 android:id="@+id/loggingOut_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5. Logging Out"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:text="@string/step_5_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/loggingOut_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="32dp"
-                android:text="To exit, you can simply close the app or find the 'Logout' option in your profile settings."
-                android:textColor="#666666"
-                android:textSize="15sp" />
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xxxxlarge"
+                android:text="@string/step_5_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
 
         </LinearLayout>
     </ScrollView>
