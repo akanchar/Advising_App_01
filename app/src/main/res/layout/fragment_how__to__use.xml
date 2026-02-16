@@ -53,13 +53,16 @@
 
             <!-- Step 1 -->
             <TextView
+                android:id="@+id/openingApp_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/step_1_title"
                 android:textColor="@color/medium_gray"
                 android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/openingApp_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"
@@ -70,13 +73,16 @@
 
             <!-- Step 2 -->
             <TextView
+                android:id="@+id/navigatingApp_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/step_2_title"
                 android:textColor="@color/medium_gray"
                 android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/navigatingApp_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"
@@ -87,13 +93,16 @@
 
             <!-- Step 3 -->
             <TextView
+                android:id="@+id/performingAction_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/step_3_title"
                 android:textColor="@color/medium_gray"
                 android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/performingAction_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"
@@ -104,13 +113,16 @@
 
             <!-- Step 4 -->
             <TextView
+                android:id="@+id/saving_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/step_4_title"
                 android:textColor="@color/medium_gray"
                 android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/saving_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"
@@ -121,13 +133,16 @@
 
             <!-- Step 5 -->
             <TextView
+                android:id="@+id/loggingOut_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/step_5_title"
                 android:textColor="@color/medium_gray"
                 android:textSize="@dimen/text_size_body_2"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/loggingOut_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_small"

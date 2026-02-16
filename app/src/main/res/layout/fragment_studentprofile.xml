@@ -28,7 +28,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/studentProfileTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/spacing_xxlarge"
@@ -39,6 +39,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/majorTEXT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/major_label"
@@ -53,6 +54,7 @@
                 android:background="@android:drawable/btn_dropdown" />
 
             <TextView
+                android:id="@+id/MinorText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/minor_label"
@@ -67,6 +69,7 @@
                 android:background="@android:drawable/btn_dropdown" />
 
             <TextView
+                android:id="@+id/graduationDateText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/graduation_date_label"

@@ -11,7 +11,7 @@
 
     <!-- Subtitle -->
     <TextView
-        android:id="@+id/textViewSubtitle"
+        android:id="@+id/major_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fragment_vertical_margin"
@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toTopOf="@+id/legendContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewSubtitle">
+        app:layout_constraintTop_toBottomOf="@id/major_header">
 
         <HorizontalScrollView
             android:id="@+id/horizontalScroll"
@@ -68,6 +68,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/completed_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/fragment_horizontal_margin"
@@ -77,6 +78,7 @@
             app:drawableStartCompat="@android:drawable/presence_online" />
 
         <TextView
+            android:id="@+id/inprogress_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/fragment_horizontal_margin"
@@ -86,6 +88,7 @@
             app:drawableStartCompat="@android:drawable/presence_away" />
 
         <TextView
+            android:id="@+id/required_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="@dimen/drawable_padding"

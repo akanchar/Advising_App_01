@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/UT_Spartans_wordmark" />
 
     <TextView
-        android:id="@+id/textViewAppName"
+        android:id="@+id/UplanID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/u_plan_title"

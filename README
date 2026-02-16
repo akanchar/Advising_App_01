@@ -1,0 +1,46 @@
+Project Overview:
+  The Advising App serves as a digital assistant for students navigating their academic requirements. 
+
+Key Features: 
+  Authentication Flow: Includes a login and signup system for student access.
+  Student Profile: A dashboard acting as the central hub for student information.
+  Academic Tools: Visual class layouts to track progress.
+  Advising Resources: Direct access to advisor information, and a comprehensive FAQ section.
+
+Navigation Design:
+  The app utilizes a NavHostFragment to manage screen transitions via nav.xml.
+    1. StartingScreen: The entry point.
+    2. Authentication: Users navigate to either LoginScreen or signupFragment.
+    3. Core Dashboard: Successful authentication leads to the StudentProfile.
+    4. Sub-Modules: From the profile, users can access ClassLayout, AdvisingInfo, FAQ_Resources, and how_To_Use.
+
+The project follows the standard Android package structure, organized by feature.
+app/src/main/
+├── java/com/vanarsdale/makinganav/
+│   ├── ui/
+│   │   ├── login/             # LoginFragment and authentication logic
+│   │   └── signup/            # SignupFragment and registration logic
+│   ├── StudentProfileFragment.kt
+│   ├── AdvisingInfoFragment.kt
+│   ├── FAQ_Resources.kt       # FAQ and resources screen logic
+│   ├── How_To_Use.kt          # User guides and tutorial logic
+│   ├── BlankFragment.kt       # Base fragment used for various layout displays
+│   └── MainActivity.kt        # The Single Activity hosting the NavHost
+├── res/
+│   ├── layout/                # XML layouts for all fragments
+│   ├── navigation/
+│   │   └── nav.xml            # The Navigation Graph defining the app flow
+│   └── drawable/              # UI assets including the UT Spartans branding
+└── AndroidManifest.xml        # Application configuration and permissions
+
+Installation and Setup:
+  1. Clone the repository
+    git clone https://github.com/akanchar/Advising_App_01.git
+  2. Open the project:
+    ◦ Launch Android Studio.
+    ◦ Select File > Open and navigate to the cloned project directory.
+    ◦ Wait for the Gradle sync to complete.
+  3. Run the application:
+    ◦ Connect a physical Android device or start an emulator.
+    ◦ Select the app configuration in the toolbar.
+    ◦ Click the Run button or press Shift + F10.
