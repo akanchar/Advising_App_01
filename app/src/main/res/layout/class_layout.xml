@@ -447,6 +447,20 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Edit Courses Button -->
+            <Button
+                android:id="@+id/btn_edit_courses"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#d22031"
+                android:text="Edit Courses"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="8dp" />
+
         </LinearLayout>
     </ScrollView>
 
