@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
     <Button
         android:id="@+id/login"
         android:layout_width="@dimen/button_width_regular"
@@ -18,8 +30,7 @@
         android:textSize="@dimen/text_size_subhead"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPass"
-        android:layout_marginTop="@dimen/spacing_large" />
+        tools:layout_editor_absoluteY="566dp" />
 
     <EditText
         android:id="@+id/email"
@@ -33,15 +44,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastName"
-        android:layout_marginTop="@dimen/fragment_vertical_margin" />
-
-    <CheckedTextView
-        android:id="@+id/forgotPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password"
         android:layout_marginTop="@dimen/fragment_vertical_margin" />
 
     <EditText

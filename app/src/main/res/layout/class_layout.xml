@@ -126,7 +126,6 @@
                     android:orientation="vertical"
                     android:padding="4dp">
 
-                    <!-- Course Row 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -152,7 +151,6 @@
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
 
-                    <!-- Course Row 2 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -178,7 +176,6 @@
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
 
-                    <!-- Course Row 3 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -204,7 +201,6 @@
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
 
-                    <!-- Course Row 4 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -454,7 +450,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Template Skeleton (Included at the bottom to ensure it's drawn on top of the ScrollView) -->
+    <!-- Template Skeleton -->
     <include layout="@layout/skeleton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

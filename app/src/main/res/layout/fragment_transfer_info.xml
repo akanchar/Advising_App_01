@@ -69,23 +69,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Credits Transferring In"
-                android:textStyle="bold"
-                android:textColor="@color/medium_gray" />
-
-            <EditText
-                android:id="@+id/edit_transfer_credits"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
-                android:layout_marginBottom="@dimen/spacing_xxlarge"
-                android:hint="Total credits"
-                android:inputType="number"
-                android:importantForAutofill="no"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Additional Notes"
                 android:textStyle="bold"
                 android:textColor="@color/medium_gray" />
