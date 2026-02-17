@@ -59,9 +59,6 @@
         <action
             android:id="@+id/action_StudentProfile_to_progressAreaFragment2"
             app:destination="@id/progressAreaFragment2" />
-        <action
-            android:id="@+id/action_StudentProfile_to_TransferInfo"
-            app:destination="@id/TransferInfo" />
     </fragment>
     <fragment
         android:id="@+id/AdvisingInfo"
@@ -129,16 +126,6 @@
         android:name="com.vanarsdale.makinganav.ui.login.ForgotPasswordFragment"
         android:label="Forgot Password"
         tools:layout="@layout/fragment_forgot_password" />
-
-    <fragment
-        android:id="@+id/TransferInfo"
-        android:name="com.vanarsdale.makinganav.TransferInfoFragment"
-        android:label="Transfer Information"
-        tools:layout="@layout/fragment_transfer_info" >
-        <action
-            android:id="@+id/action_TransferInfo_to_StudentProfile"
-            app:destination="@id/StudentProfile" />
-    </fragment>
 
     <fragment
         android:id="@+id/CourseCompletion"
