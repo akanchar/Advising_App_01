@@ -41,10 +41,6 @@ class AdvisingInfoFragment : Fragment() {
             findNavController().navigate(R.id.action_AdvisingInfo_to_FAQ_Resources)
         }
 
-        view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
-            findNavController().navigate(R.id.action_AdvisingInfo_to_StudentProfile)
-        }
-
         return view
     }
 }

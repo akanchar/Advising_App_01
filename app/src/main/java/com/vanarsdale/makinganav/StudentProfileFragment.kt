@@ -17,34 +17,6 @@ class StudentProfileFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_studentprofile, container, false)
 
-        // Handle Transfer Student Switch
-        val transferSwitch = view.findViewById<SwitchCompat>(R.id.switch_transfer)
-        transferSwitch?.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                findNavController().navigate(R.id.action_StudentProfile_to_TransferInfo)
-            }
-        }
-
-        // The navigation buttons are part of the included skeleton.xml
-        val advisorButton = view.findViewById<ImageButton>(R.id.btn_advisor)
-        advisorButton?.setOnClickListener {
-            findNavController().navigate(R.id.action_StudentProfile_to_AdvisingInfo)
-        }
-
-        val flowchartButton = view.findViewById<ImageButton>(R.id.btn_flowchart)
-        flowchartButton?.setOnClickListener {
-            findNavController().navigate(R.id.action_StudentProfile_to_ClassLayout)
-        }
-
-        val helpButton = view.findViewById<ImageButton>(R.id.btn_help)
-        helpButton?.setOnClickListener {
-            findNavController().navigate(R.id.action_StudentProfile_to_how_To_Use2)
-        }
-
-        val faqButton = view.findViewById<ImageButton>(R.id.btn_faq)
-        faqButton?.setOnClickListener {
-            findNavController().navigate(R.id.action_StudentProfile_to_FAQ_Resources2)
-        }
 
         return view
     }
