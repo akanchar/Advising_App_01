@@ -46,19 +46,37 @@
         <action
             android:id="@+id/action_ClassLayout_to_CourseCompletion"
             app:destination="@id/CourseCompletion" />
+        <action
+            android:id="@+id/action_ClassLayout_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
     </fragment>
     <fragment
-        android:id="@+id/StudentProfile"
-        android:name="com.vanarsdale.makinganav.StudentProfileFragment"
-        android:label="student_profile"
-        tools:layout="@layout/fragment_studentprofile" >
+        android:id="@+id/StudentOnboarding"
+        android:name="com.vanarsdale.makinganav.StudentOnboardingFragment"
+        android:label="Student Onboarding"
+        tools:layout="@layout/fragment_student_onboarding" >
         <argument
             android:name="userId"
             app:argType="string"
             android:defaultValue="default_user_id" />
         <action
-            android:id="@+id/action_StudentProfile_to_progressAreaFragment2"
+            android:id="@+id/action_StudentOnboarding_to_progressAreaFragment2"
             app:destination="@id/progressAreaFragment2" />
+        <action
+            android:id="@+id/action_StudentOnboarding_to_TransferInfo"
+            app:destination="@id/TransferInfo" />
+        <action
+            android:id="@+id/action_StudentOnboarding_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_StudentOnboarding_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_StudentOnboarding_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_StudentOnboarding_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
     </fragment>
     <fragment
         android:id="@+id/AdvisingInfo"
@@ -74,6 +92,9 @@
         <action
             android:id="@+id/action_AdvisingInfo_to_FAQ_Resources"
             app:destination="@id/FAQ_Resources" />
+        <action
+            android:id="@+id/action_AdvisingInfo_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
     </fragment>
     <fragment
         android:id="@+id/FAQ_Resources"
@@ -94,6 +115,9 @@
         <action
             android:id="@+id/action_FAQ_Resources_to_AdvisingInfo"
             app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_FAQ_Resources_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
     </fragment>
     <fragment
         android:id="@+id/how_To_Use"
@@ -109,6 +133,9 @@
         <action
             android:id="@+id/action_how_To_Use_to_FAQ_Resources"
             app:destination="@id/FAQ_Resources" />
+        <action
+            android:id="@+id/action_how_To_Use_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
     </fragment>
 
     <fragment
@@ -117,8 +144,8 @@
         android:label="Sign Up"
         tools:layout="@layout/fragment_signup" >
         <action
-            android:id="@+id/action_signupFragment_to_StudentProfile"
-            app:destination="@id/StudentProfile" />
+            android:id="@+id/action_signupFragment_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
     </fragment>
 
     <fragment
@@ -135,6 +162,18 @@
         <action
             android:id="@+id/action_CourseCompletion_to_ClassLayout"
             app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_CourseCompletion_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
     </fragment>
     <fragment
         android:id="@+id/progressAreaFragment2"
@@ -142,8 +181,8 @@
         android:label="fragment_progress_area"
         tools:layout="@layout/fragment_progress_area" >
         <action
-            android:id="@+id/action_progressAreaFragment2_to_StudentProfile"
-            app:destination="@id/StudentProfile" />
+            android:id="@+id/action_progressAreaFragment2_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
         <action
             android:id="@+id/action_progressAreaFragment2_to_ClassLayout"
             app:destination="@id/ClassLayout" />
@@ -156,6 +195,28 @@
         <action
             android:id="@+id/action_progressAreaFragment2_to_FAQ_Resources"
             app:destination="@id/FAQ_Resources" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TransferInfo"
+        android:name="com.vanarsdale.makinganav.TransferInfoFragment"
+        android:label="Transfer Information"
+        tools:layout="@layout/fragment_transfer_info" >
+        <action
+            android:id="@+id/action_TransferInfo_to_StudentOnboarding"
+            app:destination="@id/StudentOnboarding" />
+        <action
+            android:id="@+id/action_TransferInfo_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+        <action
+            android:id="@+id/action_TransferInfo_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_TransferInfo_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_TransferInfo_to_FAQResources"
+            app:destination="@id/FAQResources" />
     </fragment>
 
 </navigation>

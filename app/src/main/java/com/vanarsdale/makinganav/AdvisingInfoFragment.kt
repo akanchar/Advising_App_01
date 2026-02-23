@@ -42,7 +42,7 @@ class AdvisingInfoFragment : Fragment() {
         }
 
         view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
-            findNavController().navigate(R.id.action_AdvisingInfo_to_StudentProfile)
+            findNavController().navigate(R.id.action_AdvisingInfo_to_StudentOnboarding)
         }
 
         return view

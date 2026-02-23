@@ -18,6 +18,7 @@
 
     <!-- class_layout.xml -->
     <string name="math_major_flowchart_title">Math Major Flowchart</string>
+    <string name="math_minor_requirements_title">Math Minor Requirements</string>
     <string name="legend_completed">Completed</string>
     <string name="legend_in_progress">In Progress</string>
     <string name="legend_required">Required</string>

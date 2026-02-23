@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Template Skeleton -->
+    <include layout="@layout/skeleton" />
+
+    <!-- Profile Content -->
+    <ScrollView
+        android:id="@+id/profile_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintTop_toBottomOf="@id/header_bg"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/fragment_horizontal_margin">
+
+            <TextView
+                android:id="@+id/studentProfileTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xxlarge"
+                android:text="Student Onboarding"
+                android:textAlignment="center"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/text_size_headline"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/majorTEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/major_label"
+                android:textStyle="bold"
+                android:textColor="@color/medium_gray" />
+
+            <Spinner
+                android:id="@+id/spinner_major"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <Button
+                android:id="@+id/btn_add_major"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:text="@string/add_major_button"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/text_size_caption" />
+
+            <TextView
+                android:id="@+id/MinorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minor_label"
+                android:textStyle="bold"
+                android:textColor="@color/medium_gray" />
+
+            <Spinner
+                android:id="@+id/spinner_minor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <Button
+                android:id="@+id/btn_add_minor"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:text="@string/add_minor_button"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/text_size_caption" />
+
+            <TextView
+                android:id="@+id/graduationDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/graduation_date_label"
+                android:textStyle="bold"
+                android:textColor="@color/medium_gray" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginBottom="@dimen/spacing_xxlarge"
+                android:ems="10"
+                android:hint="@string/date_hint"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:text="@string/transfer_student_prompt"
+                android:textSize="@dimen/text_size_body_1"
+                android:textColor="@color/medium_gray" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_graduate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xxxlarge"
+                android:text="@string/graduate_student_prompt"
+                android:textSize="@dimen/text_size_body_1"
+                android:textColor="@color/medium_gray" />
+
+            <Button
+                android:id="@+id/btn_save_profile"
+                android:layout_width="@dimen/button_width_regular"
+                android:layout_height="@dimen/button_save_profile_height"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/brand_red"
+                android:text="@string/save_profile_button"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

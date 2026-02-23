@@ -41,10 +41,10 @@ class TransferInfoFragment : Fragment() {
             findNavController().navigate(R.id.action_TransferInfo_to_how_To_Use)
         }
         view.findViewById<ImageButton>(R.id.btn_faq)?.setOnClickListener {
-            findNavController().navigate(R.id.action_TransferInfo_to_FAQ_Resources)
+            findNavController().navigate(R.id.action_TransferInfo_to_FAQResources)
         }
         view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
-            findNavController().navigate(R.id.action_TransferInfo_to_StudentProfile)
+            findNavController().navigate(R.id.action_TransferInfo_to_StudentOnboarding)
         }
 
         return view
