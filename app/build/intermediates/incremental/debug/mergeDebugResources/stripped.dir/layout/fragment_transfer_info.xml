@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Template Skeleton -->
+    <include layout="@layout/skeleton" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/header_bg"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/fragment_horizontal_margin">
+
+            <TextView
+                android:id="@+id/transferTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xxlarge"
+                android:text="Transfer Information"
+                android:textAlignment="center"
+                android:textColor="@color/brand_red"
+                android:textSize="@dimen/text_size_headline"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous School"
+                android:textStyle="bold"
+                android:textColor="@color/medium_gray" />
+
+            <EditText
+                android:id="@+id/edit_previous_school"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:hint="Enter school name"
+                android:inputType="text"
+                android:importantForAutofill="no"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incoming Year"
+                android:textStyle="bold"
+                android:textColor="@color/medium_gray" />
+
+            <Spinner
+                android:id="@+id/spinner_incoming_year"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Notes"
+                android:textStyle="bold"
+                android:textColor="@color/medium_gray" />
+
+            <EditText
+                android:id="@+id/edit_transfer_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xxxlarge"
+                android:gravity="top"
+                android:hint="Any other relevant details..."
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:importantForAutofill="no"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_save_transfer_info"
+                android:layout_width="@dimen/button_width_regular"
+                android:layout_height="@dimen/button_save_profile_height"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/brand_red"
+                android:text="Save Transfer Info"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

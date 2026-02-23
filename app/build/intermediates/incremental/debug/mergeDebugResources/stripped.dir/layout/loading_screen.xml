@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BlankFragment">
+
+    <ImageView
+        android:id="@+id/UTLogo"
+        android:layout_width="@dimen/image_view_logo_size"
+        android:layout_height="@dimen/image_view_logo_size"
+        android:contentDescription="@string/university_logo_description"
+        android:src="@drawable/UT_Spartans_wordmark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <TextView
+        android:id="@+id/UplanTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxxlarge"
+        android:shadowColor="@color/black"
+        android:shadowDx="@dimen/shadow_dx"
+        android:shadowDy="@dimen/shadow_dy"
+        android:shadowRadius="@dimen/shadow_radius"
+        android:text="@string/u_plan_title"
+        android:textColor="@color/brand_red"
+        android:textSize="@dimen/text_size_display"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UTLogo" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="@dimen/button_width_regular"
+        android:layout_height="@dimen/button_height_regular"
+        android:layout_marginTop="@dimen/spacing_xxlarge"
+        android:backgroundTint="@color/brand_red"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UplanTEXT" />
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="@dimen/button_width_regular"
+        android:layout_height="@dimen/button_height_regular"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:backgroundTint="@color/brand_red"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
