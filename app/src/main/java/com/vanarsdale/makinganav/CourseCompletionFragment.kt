@@ -60,6 +60,7 @@ class CourseCompletionFragment : Fragment() {
         view.findViewById<ImageButton>(R.id.btn_flowchart)?.setOnClickListener {
             findNavController().navigate(R.id.action_CourseCompletion_to_ClassLayout)
         }
+<<<<<<< Updated upstream
         view.findViewById<ImageButton>(R.id.btn_advisor)?.setOnClickListener {
             findNavController().navigate(R.id.action_CourseCompletion_to_AdvisingInfo)
         }
@@ -69,6 +70,9 @@ class CourseCompletionFragment : Fragment() {
         view.findViewById<ImageButton>(R.id.btn_faq)?.setOnClickListener {
             findNavController().navigate(R.id.action_CourseCompletion_to_FAQ_Resources)
         }
+=======
+
+>>>>>>> Stashed changes
         view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
             findNavController().navigate(R.id.action_CourseCompletion_to_StudentProfile)
         }
