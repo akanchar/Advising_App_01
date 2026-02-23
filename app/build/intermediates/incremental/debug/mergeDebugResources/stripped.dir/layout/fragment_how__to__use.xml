@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/how_to_use_desc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".How_To_Use">
+
+    <!-- Template Skeleton -->
+    <include layout="@layout/skeleton" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/how_to_use_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:text="@string/how_to_use_title"
+        android:textColor="@color/brand_red"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_bg" />
+
+    <!-- Introduction text -->
+    <TextView
+        android:id="@+id/how_to_use_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_xxlarge"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:text="@string/how_to_use_intro"
+        android:textAlignment="center"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/text_size_body_1"
+        app:layout_constraintTop_toBottomOf="@id/how_to_use_title" />
+
+    <!-- Scrollable container for instructions -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/spacing_xlarge"
+        android:paddingHorizontal="@dimen/spacing_xxxlarge"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
+        app:layout_constraintTop_toBottomOf="@id/how_to_use_intro">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Step 1 -->
+            <TextView
+                android:id="@+id/openingApp_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_1_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/openingApp_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_1_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
+
+            <!-- Step 2 -->
+            <TextView
+                android:id="@+id/navigatingApp_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_2_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/navigatingApp_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_2_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
+
+            <!-- Step 3 -->
+            <TextView
+                android:id="@+id/performingAction_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_3_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/performingAction_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_3_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
+
+            <!-- Step 4 -->
+            <TextView
+                android:id="@+id/saving_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_4_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saving_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:text="@string/step_4_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
+
+            <!-- Step 5 -->
+            <TextView
+                android:id="@+id/loggingOut_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_5_title"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/text_size_body_2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/loggingOut_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_xxxxlarge"
+                android:text="@string/step_5_text"
+                android:textColor="@color/off_white"
+                android:textSize="@dimen/text_size_caption" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
