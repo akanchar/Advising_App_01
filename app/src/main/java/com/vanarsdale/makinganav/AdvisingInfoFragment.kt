@@ -28,7 +28,7 @@ class AdvisingInfoFragment : Fragment() {
             startActivity(Intent.createChooser(emailIntent, "Send email..."))
         }
 
-        
+
         return view
     }
 }

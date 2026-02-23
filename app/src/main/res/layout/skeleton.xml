@@ -23,7 +23,7 @@
         app:layout_constraintBottom_toBottomOf="@id/header_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/header_bg"
-        app:srcCompat="@drawable/ut_spartans_wordmark" />
+        app:srcCompat="@drawable/UT_Spartans_wordmark" />
 
     <TextView
         android:id="@+id/UplanID"
