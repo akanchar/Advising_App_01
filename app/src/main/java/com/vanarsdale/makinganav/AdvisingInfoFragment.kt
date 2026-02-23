@@ -28,19 +28,7 @@ class AdvisingInfoFragment : Fragment() {
             startActivity(Intent.createChooser(emailIntent, "Send email..."))
         }
 
-        // Setup navigation buttons from skeleton.xml
-        view.findViewById<ImageButton>(R.id.btn_flowchart)?.setOnClickListener {
-            findNavController().navigate(R.id.action_AdvisingInfo_to_ClassLayout)
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_help)?.setOnClickListener {
-            findNavController().navigate(R.id.action_AdvisingInfo_to_how_To_Use)
-        }
-
-        view.findViewById<ImageButton>(R.id.btn_faq)?.setOnClickListener {
-            findNavController().navigate(R.id.action_AdvisingInfo_to_FAQ_Resources)
-        }
-
+        
         return view
     }
 }
