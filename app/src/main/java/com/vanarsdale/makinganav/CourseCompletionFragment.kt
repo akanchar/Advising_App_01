@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.textfield.TextInputEditText
 
 class CourseCompletionFragment : Fragment() {
 
@@ -21,38 +23,32 @@ class CourseCompletionFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_course_completion, container, false)
 
-        val spinnerCourse = view.findViewById<Spinner>(R.id.spinner_course)
+        val etSearch = view.findViewById<TextInputEditText>(R.id.et_course_search)
         val spinnerSemester = view.findViewById<Spinner>(R.id.spinner_semester)
-        val btnAdd = view.findViewById<Button>(R.id.btn_add_course_completion)
-        val courseListLayout = view.findViewById<LinearLayout>(R.id.completed_courses_list)
+        val btnAdd = view.findViewById<Button>(R.id.btn_add_course)
+        val rvCompleted = view.findViewById<RecyclerView>(R.id.rv_completed_courses)
 
-        // Sample data for spinners
-        val courses = arrayOf("Select Course", "MAT 101", "MAT 102", "CSC 101", "CSC 102", "ENG 101")
+        // Setup Semester Spinner
         val semesters = arrayOf("Select Semester", "Fall 2023", "Spring 2024", "Fall 2024", "Spring 2025")
-
-        val courseAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, courses)
-        courseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerCourse.adapter = courseAdapter
-
         val semesterAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, semesters)
         semesterAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerSemester.adapter = semesterAdapter
 
-        // Add a pre-loaded example
-        addCourseItem("MAT 101", "Fall 2023", courseListLayout)
+        // Setup Completed Courses RecyclerView
+        rvCompleted.layoutManager = LinearLayoutManager(requireContext())
+        // Note: You would typically set an adapter here for the RecyclerView
 
         btnAdd.setOnClickListener {
-            val selectedCourse = spinnerCourse.selectedItem.toString()
+            val courseSearch = etSearch.text.toString()
             val selectedSemester = spinnerSemester.selectedItem.toString()
 
-            if (selectedCourse == "Select Course" || selectedSemester == "Select Semester") {
+            if (courseSearch.isEmpty() || selectedSemester == "Select Semester") {
+                // Handle error or toast
                 return@setOnClickListener
             }
 
-            addCourseItem(selectedCourse, selectedSemester, courseListLayout)
-
-            // Clear/Reset dropdowns
-            spinnerCourse.setSelection(0)
+            // Logic to add the course would go here
+            etSearch.text?.clear()
             spinnerSemester.setSelection(0)
         }
 
@@ -60,52 +56,11 @@ class CourseCompletionFragment : Fragment() {
         view.findViewById<ImageButton>(R.id.btn_flowchart)?.setOnClickListener {
             findNavController().navigate(R.id.action_CourseCompletion_to_ClassLayout)
         }
-<<<<<<< Updated upstream
-        view.findViewById<ImageButton>(R.id.btn_advisor)?.setOnClickListener {
-            findNavController().navigate(R.id.action_CourseCompletion_to_AdvisingInfo)
-        }
-        view.findViewById<ImageButton>(R.id.btn_help)?.setOnClickListener {
-            findNavController().navigate(R.id.action_CourseCompletion_to_how_To_Use)
-        }
-        view.findViewById<ImageButton>(R.id.btn_faq)?.setOnClickListener {
-            findNavController().navigate(R.id.action_CourseCompletion_to_FAQ_Resources)
-        }
-=======
-
->>>>>>> Stashed changes
+        
         view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
-            findNavController().navigate(R.id.action_CourseCompletion_to_StudentProfile)
+            findNavController().navigate(R.id.StudentProfile)
         }
 
         return view
-    }
-
-    private fun addCourseItem(courseName: String, semester: String, container: LinearLayout) {
-        // Remove the "No courses added yet" placeholder if present
-        if (container.childCount == 1 && (container.getChildAt(0) as? TextView)?.text == "No courses added yet.") {
-            container.removeAllViews()
-        }
-
-        val itemView = layoutInflater.inflate(R.layout.item_course_completion, container, false)
-        
-        itemView.findViewById<TextView>(R.id.tv_course_name).text = courseName
-        itemView.findViewById<TextView>(R.id.tv_semester).text = semester
-        
-        itemView.findViewById<ImageButton>(R.id.btn_delete_course).setOnClickListener {
-            container.removeView(itemView)
-            
-            // If the list is empty, show the placeholder again
-            if (container.childCount == 0) {
-                val placeholder = TextView(requireContext()).apply {
-                    text = "No courses added yet."
-                    textAlignment = View.TEXT_ALIGNMENT_CENTER
-                    setPadding(0, 32, 0, 32)
-                    setTextColor(resources.getColor(R.color.dark_gray, null))
-                }
-                container.addView(placeholder)
-            }
-        }
-        
-        container.addView(itemView)
     }
 }
