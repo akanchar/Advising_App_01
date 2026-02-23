@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_LoginScreen_to_forgotPasswordFragment"
             app:destination="@id/forgotPasswordFragment" />
-        <action
-            android:id="@+id/action_LoginScreen_to_progressAreaFragment2"
-            app:destination="@id/progressAreaFragment2" />
     </fragment>
     <fragment
         android:id="@+id/StartingScreen"
@@ -34,15 +31,6 @@
         android:name="com.vanarsdale.makinganav.ClassLayoutFragment"
         android:label="class_layout"
         tools:layout="@layout/class_layout" >
-        <action
-            android:id="@+id/action_ClassLayout_to_AdvisingInfo"
-            app:destination="@id/AdvisingInfo" />
-        <action
-            android:id="@+id/action_ClassLayout_to_how_To_Use"
-            app:destination="@id/how_To_Use" />
-        <action
-            android:id="@+id/action_ClassLayout_to_FAQ_Resources"
-            app:destination="@id/FAQ_Resources" />
         <action
             android:id="@+id/action_ClassLayout_to_CourseCompletion"
             app:destination="@id/CourseCompletion" />
@@ -64,17 +52,7 @@
         android:id="@+id/AdvisingInfo"
         android:name="com.vanarsdale.makinganav.AdvisingInfoFragment"
         android:label="fragment_advising_info"
-        tools:layout="@layout/fragment_advising_info" >
-        <action
-            android:id="@+id/action_AdvisingInfo_to_ClassLayout"
-            app:destination="@id/ClassLayout" />
-        <action
-            android:id="@+id/action_AdvisingInfo_to_how_To_Use"
-            app:destination="@id/how_To_Use" />
-        <action
-            android:id="@+id/action_AdvisingInfo_to_FAQ_Resources"
-            app:destination="@id/FAQ_Resources" />
-    </fragment>
+        tools:layout="@layout/fragment_advising_info" />
     <fragment
         android:id="@+id/FAQ_Resources"
         android:name="com.vanarsdale.makinganav.FAQResources"
@@ -85,31 +63,12 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="@null" />
-        <action
-            android:id="@+id/action_FAQ_Resources_to_how_To_Use"
-            app:destination="@id/how_To_Use" />
-        <action
-            android:id="@+id/action_FAQ_Resources_to_ClassLayout"
-            app:destination="@id/ClassLayout" />
-        <action
-            android:id="@+id/action_FAQ_Resources_to_AdvisingInfo"
-            app:destination="@id/AdvisingInfo" />
     </fragment>
     <fragment
         android:id="@+id/how_To_Use"
         android:name="com.vanarsdale.makinganav.How_To_Use"
         android:label="fragment_how__to__use"
-        tools:layout="@layout/fragment_how__to__use" >
-        <action
-            android:id="@+id/action_how_To_Use_to_ClassLayout"
-            app:destination="@id/ClassLayout" />
-        <action
-            android:id="@+id/action_how_To_Use_to_AdvisingInfo"
-            app:destination="@id/AdvisingInfo" />
-        <action
-            android:id="@+id/action_how_To_Use_to_FAQ_Resources"
-            app:destination="@id/FAQ_Resources" />
-    </fragment>
+        tools:layout="@layout/fragment_how__to__use" />
 
     <fragment
         android:id="@+id/signupFragment"
@@ -144,18 +103,6 @@
         <action
             android:id="@+id/action_progressAreaFragment2_to_StudentProfile"
             app:destination="@id/StudentProfile" />
-        <action
-            android:id="@+id/action_progressAreaFragment2_to_ClassLayout"
-            app:destination="@id/ClassLayout" />
-        <action
-            android:id="@+id/action_progressAreaFragment2_to_AdvisingInfo"
-            app:destination="@id/AdvisingInfo" />
-        <action
-            android:id="@+id/action_progressAreaFragment2_to_how_To_Use"
-            app:destination="@id/how_To_Use" />
-        <action
-            android:id="@+id/action_progressAreaFragment2_to_FAQ_Resources"
-            app:destination="@id/FAQ_Resources" />
     </fragment>
 
 </navigation>
