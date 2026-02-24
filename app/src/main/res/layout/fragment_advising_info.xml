@@ -105,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_xlarge"
                 android:backgroundTint="@color/brand_red"
-                android:text="Email Advisor"
+                android:text="@string/email_advisor"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_office"

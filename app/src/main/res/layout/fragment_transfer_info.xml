@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/spacing_xxlarge"
-                android:text="Transfer Information"
+                android:text="@string/transfer_info_title"
                 android:textAlignment="center"
                 android:textColor="@color/brand_red"
                 android:textSize="@dimen/text_size_headline"
@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Previous School"
+                android:text="@string/previous_school_label"
                 android:textStyle="bold"
                 android:textColor="@color/medium_gray" />
 
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginBottom="@dimen/spacing_xlarge"
-                android:hint="Enter school name"
+                android:hint="@string/previous_school_hint"
                 android:inputType="text"
                 android:importantForAutofill="no"
                 android:textColor="@color/black" />
@@ -55,7 +55,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Incoming Year"
+                android:text="@string/incoming_year_label"
                 android:textStyle="bold"
                 android:textColor="@color/medium_gray" />
 
@@ -69,7 +69,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Additional Notes"
+                android:text="@string/additional_notes_label"
                 android:textStyle="bold"
                 android:textColor="@color/medium_gray" />
 
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/spacing_xxxlarge"
                 android:gravity="top"
-                android:hint="Any other relevant details..."
+                android:hint="@string/additional_notes_hint"
                 android:inputType="textMultiLine"
                 android:lines="4"
                 android:importantForAutofill="no"
@@ -91,7 +91,7 @@
                 android:layout_height="@dimen/button_save_profile_height"
                 android:layout_gravity="center_horizontal"
                 android:backgroundTint="@color/brand_red"
-                android:text="Save Transfer Info"
+                android:text="@string/save_transfer_info_button"
                 android:textColor="@color/white" />
 
         </LinearLayout>

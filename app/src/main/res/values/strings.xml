@@ -21,9 +21,35 @@
     <string name="legend_completed">Completed</string>
     <string name="legend_in_progress">In Progress</string>
     <string name="legend_required">Required</string>
+    <string name="class_layout_major">Major</string>
+    <string name="class_layout_minor">Minor</string>
+    <string name="class_layout_completed">Completed</string>
+    <string name="class_layout_in_progress">In Progress</string>
+    <string name="class_layout_remaining">Remaining</string>
+    <string name="class_layout_semester_1">Semester 1</string>
+    <string name="class_layout_mat_170">MAT 170: Calculus I</string>
+    <string name="class_layout_grade_hint">Grade</string>
+    <string name="class_layout_grade_a">A</string>
+    <string name="class_layout_csc_101">CSC 101: The Science of Computing I</string>
+    <string name="class_layout_grade_b_plus">B+</string>
+    <string name="class_layout_phy_200">PHY 200: General Physics I</string>
+    <string name="class_layout_grade_a_minus">A-</string>
+    <string name="class_layout_mat_271">MAT 271: Linear Algebra</string>
+    <string name="class_layout_grade_b">B</string>
+    <string name="class_layout_semester_2">Semester 2</string>
+    <string name="class_layout_mat_260">MAT 260: Calculus II</string>
+    <string name="class_layout_csc_102">CSC 102: The Science of Computing II</string>
+    <string name="class_layout_phy_201">PHY 201: General Physics II</string>
+    <string name="class_layout_mat_271_applied">MAT 271: Applied Statistics</string>
+    <string name="class_layout_semester_3">Semester 3</string>
+    <string name="class_layout_mat_261">MAT 261: Calculus III</string>
+    <string name="class_layout_mat_275">MAT 275: Discrete Mathematics</string>
+    <string name="class_layout_csc_301">CSC 301: Advance Data Structures</string>
+    <string name="class_layout_edit_courses">Edit Courses</string>
 
     <!-- fragment_login.xml -->
     <string name="forgot_password">Forgot Password?</string>
+    <string name="back_button_description">Back</string>
 
     <!-- loading_screen.xml -->
     <string name="sign_up">Sign Up</string>
@@ -40,12 +66,21 @@
 
     <!-- fragment_advising_info.xml -->
     <string name="advising_steps_overview_title">Advising Steps Overview</string>
-    <string name="advising_steps_content">1. Log into Workday to check for holds.\n\n2. Review your degree audit.\n\n3. Schedule an appointment with your advisor.\n\n4. Prepare a list of potential classes.\n\n5. Meet with your advisor and get cleared for registration.</string>
+    <string name="advising_steps_content">1. Log into Workday to check for holds.
+
+2. Review your degree audit.
+
+3. Schedule an appointment with your advisor.
+
+4. Prepare a list of potential classes.
+
+5. Meet with your advisor and get cleared for registration.</string>
     <string name="advisor_contact_info_title">Advisor Contact Info</string>
     <string name="advisor_name">Name: Dr. John Smith</string>
     <string name="advisor_email">Email: jsmith@ut.edu</string>
     <string name="advisor_office">Office: Plant Hall 123</string>
     <string name="back">Back</string>
+    <string name="email_advisor">Email Advisor</string>
 
     <!-- fragment_signup.xml -->
     <string name="prompt_first_name">First Name</string>
@@ -61,9 +96,9 @@
     <string name="step_3_title">3. Performing the Main Action</string>
     <string name="step_3_text">Tap on any question or resource title to expand the section and view detailed information.</string>
     <string name="step_4_title">4. Saving or Submitting</string>
-    <string name="step_4_text">If you fill out any forms or make changes, ensure you tap \'Save\' or \'Submit\' at the bottom of the page.</string>
+    <string name="step_4_text">If you fill out any forms or make changes, ensure you tap 'Save' or 'Submit' at the bottom of the page.</string>
     <string name="step_5_title">5. Logging Out</string>
-    <string name="step_5_text">To exit, you can simply close the app or find the \'Logout\' option in your profile settings.</string>
+    <string name="step_5_text">To exit, you can simply close the app or find the 'Logout' option in your profile settings.</string>
 
     <!-- fragment_studentprofile.xml -->
     <string name="student_profile_title">Student Profile</string>
@@ -77,9 +112,9 @@
     <string name="search_hint">Search questions or resources...</string>
     <string name="faq_title">Frequently Asked Questions</string>
     <string name="faq_1_title">How do I schedule an appointment?</string>
-    <string name="faq_1_content">You can schedule an appointment through the main dashboard by clicking the \'Schedule\' button and selecting an available time slot.</string>
+    <string name="faq_1_content">You can schedule an appointment through the main dashboard by clicking the 'Schedule' button and selecting an available time slot.</string>
     <string name="faq_2_title">Where can I find my student ID?</string>
-    <string name="faq_2_content">Your student ID is located on your physical Spartan Card or can be viewed in the \'Student Profile\' section of this app.</string>
+    <string name="faq_2_content">Your student ID is located on your physical Spartan Card or can be viewed in the 'Student Profile' section of this app.</string>
     <string name="faq_3_title">How do I change my major?</string>
     <string name="faq_3_content">To change your major, you must meet with your current academic advisor to complete the necessary paperwork and obtain approval.</string>
     <string name="resources_title">Resources</string>
@@ -104,4 +139,39 @@
     <string name="select_semester_label">Select Semester</string>
     <string name="add_course_button">ADD COURSE</string>
     <string name="completed_courses_label">Completed Courses</string>
+    <string name="course_completion_search_hint">Search Courses (e.g., MAT 170)</string>
+    <string name="course_completion_add_to_semester">Add to Semester</string>
+
+    <!-- fragment_forgot_password.xml -->
+    <string name="forgot_password_title_text">Forgot Password</string>
+    <string name="forgot_password_instruction_text">Enter your email address and we'll send you instructions to reset your password.</string>
+    <string name="reset_password_button_text">Reset Password</string>
+    <string name="back_to_login_button_text">Back to Login</string>
+
+    <!-- fragment_progress_area.xml -->
+    <string name="academic_progress_title">Academic Progress</string>
+    <string name="cumulative_gpa_label">Cumulative GPA</string>
+    <string name="gpa_placeholder">3.85</string>
+    <string name="major_mathematics_label">Major: Mathematics</string>
+    <string name="major_progress_placeholder">75% Complete (45 / 60 Credits)</string>
+    <string name="minor_cs_label">Minor: Computer Science</string>
+    <string name="minor_progress_placeholder">40% Complete (8 / 20 Credits)</string>
+    <string name="credit_breakdown_label">Credit Breakdown</string>
+    <string name="core_requirements_label">Core Requirements</string>
+    <string name="core_requirements_value">100%</string>
+    <string name="major_requirements_label">Major Requirements</string>
+    <string name="major_requirements_value">75%</string>
+    <string name="electives_label">Electives</string>
+    <string name="electives_value">20%</string>
+    <string name="change_profile_button_text">Change Profile Information</string>
+
+    <!-- fragment_transfer_info.xml -->
+    <string name="transfer_info_title">Transfer Information</string>
+    <string name="previous_school_label">Previous School</string>
+    <string name="previous_school_hint">Enter school name</string>
+    <string name="incoming_year_label">Incoming Year</string>
+    <string name="additional_notes_label">Additional Notes</string>
+    <string name="additional_notes_hint">Any other relevant details...</string>
+    <string name="save_transfer_info_button">Save Transfer Info</string>
+
 </resources>

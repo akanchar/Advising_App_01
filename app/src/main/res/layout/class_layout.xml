@@ -23,14 +23,14 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Major" />
+            android:text="@string/class_layout_major" />
 
         <Button
             android:id="@+id/btn_select_minor"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Minor" />
+            android:text="@string/class_layout_minor" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="Completed"
+            android:text="@string/class_layout_completed"
             android:textSize="12sp" />
 
         <View
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="In Progress"
+            android:text="@string/class_layout_in_progress"
             android:textSize="12sp" />
 
         <View
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="Remaining"
+            android:text="@string/class_layout_remaining"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:background="#f4f4f4"
                 android:padding="8dp"
-                android:text="Semester 1"
+                android:text="@string/class_layout_semester_1"
                 android:textColor="#d22031"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -138,15 +138,15 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="MAT 170: Calculus I"
+                            android:text="@string/class_layout_mat_170"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
-                            android:text="A"
+                            android:hint="@string/class_layout_grade_hint"
+                            android:text="@string/class_layout_grade_a"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -163,15 +163,15 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="CSC 101: The Science of Computing I"
+                            android:text="@string/class_layout_csc_101"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
-                            android:text="B+"
+                            android:hint="@string/class_layout_grade_hint"
+                            android:text="@string/class_layout_grade_b_plus"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -188,15 +188,15 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="PHY 200: General Physics I"
+                            android:text="@string/class_layout_phy_200"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
-                            android:text="A-"
+                            android:hint="@string/class_layout_grade_hint"
+                            android:text="@string/class_layout_grade_a_minus"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -212,15 +212,15 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="MAT 271: Linear Algebra"
+                            android:text="@string/class_layout_mat_271"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
-                            android:text="B"
+                            android:hint="@string/class_layout_grade_hint"
+                            android:text="@string/class_layout_grade_b"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -233,7 +233,7 @@
                 android:layout_height="wrap_content"
                 android:background="#f4f4f4"
                 android:padding="8dp"
-                android:text="Semester 2"
+                android:text="@string/class_layout_semester_2"
                 android:textColor="#d22031"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -264,14 +264,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="MAT 260: Calculus II"
+                            android:text="@string/class_layout_mat_260"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
+                            android:hint="@string/class_layout_grade_hint"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -288,14 +288,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="CSC 102: The Science of Computing II"
+                            android:text="@string/class_layout_csc_102"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
+                            android:hint="@string/class_layout_grade_hint"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -312,14 +312,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="PHY 201: General Physics II"
+                            android:text="@string/class_layout_phy_201"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
+                            android:hint="@string/class_layout_grade_hint"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -335,14 +335,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="MAT 271: Applied Statistics"
+                            android:text="@string/class_layout_mat_271_applied"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
+                            android:hint="@string/class_layout_grade_hint"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -355,7 +355,7 @@
                 android:layout_height="wrap_content"
                 android:background="#f4f4f4"
                 android:padding="8dp"
-                android:text="Semester 3"
+                android:text="@string/class_layout_semester_3"
                 android:textColor="#d22031"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -386,14 +386,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="MAT 261: Calculus III"
+                            android:text="@string/class_layout_mat_261"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
+                            android:hint="@string/class_layout_grade_hint"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -410,14 +410,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="MAT 275: Discrete Mathematics"
+                            android:text="@string/class_layout_mat_275"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
+                            android:hint="@string/class_layout_grade_hint"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -433,14 +433,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="CSC 301: Advance Data Structures"
+                            android:text="@string/class_layout_csc_301"
                             android:textColor="#333333" />
                         <EditText
                             android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:hint="Grade"
+                            android:hint="@string/class_layout_grade_hint"
                             android:textSize="14sp"
                             android:inputType="textCapCharacters" />
                     </LinearLayout>
@@ -455,7 +455,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#d22031"
-                android:text="Edit Courses"
+                android:text="@string/class_layout_edit_courses"
                 android:textColor="#FFFFFF"
                 android:textAllCaps="false"
                 android:textSize="16sp"
