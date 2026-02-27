@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StartingScreen">
+
+    <fragment
+        android:id="@+id/LoginScreen"
+        android:name="com.vanarsdale.makinganav.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_LoginScreen_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_LoginScreen_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/StartingScreen"
+        android:name="com.vanarsdale.makinganav.BlankFragment"
+        android:label="loading_screen"
+        tools:layout="@layout/loading_screen" >
+        <action
+            android:id="@+id/action_blankFragment3_to_loginFragment"
+            app:destination="@id/LoginScreen" />
+        <action
+            android:id="@+id/action_StartingScreen_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ClassLayout"
+        android:name="com.vanarsdale.makinganav.ClassLayoutFragment"
+        android:label="class_layout"
+        tools:layout="@layout/class_layout" >
+        <action
+            android:id="@+id/action_ClassLayout_to_CourseCompletion"
+            app:destination="@id/CourseCompletion" />
+        <action
+            android:id="@+id/action_ClassLayout_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_ClassLayout_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_ClassLayout_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
+    </fragment>
+    <fragment
+        android:id="@+id/StudentProfile"
+        android:name="com.vanarsdale.makinganav.StudentProfileFragment"
+        android:label="student_profile"
+        tools:layout="@layout/fragment_studentprofile" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue="default_user_id" />
+        <action
+            android:id="@+id/action_StudentProfile_to_progressAreaFragment2"
+            app:destination="@id/progressAreaFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/AdvisingInfo"
+        android:name="com.vanarsdale.makinganav.AdvisingInfoFragment"
+        android:label="fragment_advising_info"
+        tools:layout="@layout/fragment_advising_info" />
+    <fragment
+        android:id="@+id/FAQ_Resources"
+        android:name="com.vanarsdale.makinganav.FAQResources"
+        android:label="fragment_f_a_q__resources"
+        tools:layout="@layout/fragment_f_a_q__resources" >
+        <argument
+            android:name="searchTerm"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/how_To_Use"
+        android:name="com.vanarsdale.makinganav.How_To_Use"
+        android:label="fragment_how__to__use"
+        tools:layout="@layout/fragment_how__to__use" />
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.vanarsdale.makinganav.ui.signup.signupFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.vanarsdale.makinganav.ui.login.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password" />
+
+    <fragment
+        android:id="@+id/CourseCompletion"
+        android:name="com.vanarsdale.makinganav.CourseCompletionFragment"
+        android:label="Course Completion"
+        tools:layout="@layout/fragment_course_completion" >
+        <action
+            android:id="@+id/action_CourseCompletion_to_ClassLayout"
+            app:destination="@id/ClassLayout" />
+    </fragment>
+    <fragment
+        android:id="@+id/progressAreaFragment2"
+        android:name="com.vanarsdale.makinganav.ProgressAreaFragment"
+        android:label="fragment_progress_area"
+        tools:layout="@layout/fragment_progress_area" >
+        <action
+            android:id="@+id/action_progressAreaFragment2_to_StudentProfile"
+            app:destination="@id/StudentProfile" />
+    </fragment>
+
+</navigation>

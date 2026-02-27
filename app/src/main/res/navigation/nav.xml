@@ -11,7 +11,14 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
+<<<<<<< Updated upstream
             android:id="@+id/action_loginFragment_to_mainActivity2"
+=======
+            android:id="@+id/action_LoginScreen_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_LoginScreen_to_StudentProfile"
+>>>>>>> Stashed changes
             app:destination="@id/StudentProfile" />
     </fragment>
     <fragment
@@ -22,6 +29,30 @@
         <action
             android:id="@+id/action_blankFragment3_to_loginFragment"
             app:destination="@id/LoginScreen" />
+<<<<<<< Updated upstream
+=======
+        <action
+            android:id="@+id/action_StartingScreen_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ClassLayout"
+        android:name="com.vanarsdale.makinganav.ClassLayoutFragment"
+        android:label="class_layout"
+        tools:layout="@layout/class_layout" >
+        <action
+            android:id="@+id/action_ClassLayout_to_CourseCompletion"
+            app:destination="@id/CourseCompletion" />
+        <action
+            android:id="@+id/action_ClassLayout_to_AdvisingInfo"
+            app:destination="@id/AdvisingInfo" />
+        <action
+            android:id="@+id/action_ClassLayout_to_how_To_Use"
+            app:destination="@id/how_To_Use" />
+        <action
+            android:id="@+id/action_ClassLayout_to_FAQ_Resources"
+            app:destination="@id/FAQ_Resources" />
+>>>>>>> Stashed changes
     </fragment>
     <fragment
         android:id="@+id/StudentProfile"

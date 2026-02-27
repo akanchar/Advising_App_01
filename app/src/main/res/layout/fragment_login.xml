@@ -70,12 +70,20 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
+<<<<<<< Updated upstream
         android:id="@+id/imageViewLogo"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:contentDescription="University Logo"
         android:src="@drawable/UT_Spartans_wordmark"
         app:layout_constraintBottom_toBottomOf="parent"
+=======
+        android:id="@+id/UTLogo"
+        android:layout_width="@dimen/image_view_logo_size"
+        android:layout_height="@dimen/image_view_logo_size"
+        android:contentDescription="@string/university_logo_description"
+        android:src="@drawable/ut_spartans_wordmark"
+>>>>>>> Stashed changes
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

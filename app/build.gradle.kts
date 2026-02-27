@@ -4,14 +4,12 @@ plugins {
 
 android {
     namespace = "com.vanarsdale.makinganav"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.vanarsdale.makinganav"
         minSdk = 27
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -34,6 +32,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+}
+
+// Workaround for "task 'testClasses' not found" error
+tasks.register("testClasses") {
+    dependsOn("compileDebugUnitTestSources")
 }
 
 dependencies {
