@@ -78,7 +78,7 @@
         android:layout_width="@dimen/image_view_logo_size"
         android:layout_height="@dimen/image_view_logo_size"
         android:contentDescription="@string/university_logo_description"
-        android:src="@drawable/UT_Spartans_wordmark"
+        android:src="@drawable/ut_spartans_wordmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
