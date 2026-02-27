@@ -4,32 +4,45 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.vanarsdale.makinganav.R
+import com.vanarsdale.makinganav.databinding.FragmentForgotPasswordBinding
 
 class ForgotPasswordFragment : Fragment() {
+
+    private var _binding: FragmentForgotPasswordBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_forgot_password, container, false)
+    ): View {
+        _binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        val resetButton = view.findViewById<Button>(R.id.btn_reset_password)
-        val backToLoginButton = view.findViewById<Button>(R.id.btn_back_to_login)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        resetButton.setOnClickListener {
-            // Placeholder for reset logic
-            Toast.makeText(context, "Reset instructions sent if email exists", Toast.LENGTH_SHORT).show()
+        binding.btnResetPassword.setOnClickListener {
+            val email = binding.email.text.toString()
+            if (email.isNotEmpty()) {
+                // Placeholder for reset logic
+                Toast.makeText(context, "Reset instructions sent to $email", Toast.LENGTH_SHORT).show()
+            } else {
+                binding.email.error = "Please enter your email"
+            }
         }
 
-        backToLoginButton.setOnClickListener {
+        binding.btnBackToLogin.setOnClickListener {
+            // Navigates back to the previous screen in the stack
             findNavController().popBackStack()
         }
+    }
 
-        return view
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
