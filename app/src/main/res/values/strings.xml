@@ -86,6 +86,7 @@
     <string name="prompt_first_name">First Name</string>
     <string name="prompt_last_name">Last Name</string>
 
+
     <!-- fragment_how__to__use.xml -->
     <string name="how_to_use_title">How To Use This App</string>
     <string name="how_to_use_intro">Welcome to U-Plan! This application is designed to help you navigate your academic advising journey with ease, providing quick access to FAQs and campus resources.</string>
@@ -96,9 +97,9 @@
     <string name="step_3_title">3. Performing the Main Action</string>
     <string name="step_3_text">Tap on any question or resource title to expand the section and view detailed information.</string>
     <string name="step_4_title">4. Saving or Submitting</string>
-    <string name="step_4_text">If you fill out any forms or make changes, ensure you tap 'Save' or 'Submit' at the bottom of the page.</string>
+    <string name="step_4_text">If you fill out any forms or make changes, ensure you tap \\'Save' or 'Submit' at the bottom of the page.</string>
     <string name="step_5_title">5. Logging Out</string>
-    <string name="step_5_text">To exit, you can simply close the app or find the 'Logout' option in your profile settings.</string>
+    <string name="step_5_text">To exit, you can simply close the app or find the \\'Logout' option in your profile settings.</string>
 
     <!-- fragment_studentprofile.xml -->
     <string name="student_profile_title">Student Profile</string>
@@ -141,6 +142,8 @@
     <string name="completed_courses_label">Completed Courses</string>
     <string name="course_completion_search_hint">Search Courses (e.g., MAT 170)</string>
     <string name="course_completion_add_to_semester">Add to Semester</string>
+    <string name="checkmark">✓</string>
+    <string name="delete_course_description">Delete course</string>
 
     <!-- fragment_forgot_password.xml -->
     <string name="forgot_password_title_text">Forgot Password</string>
