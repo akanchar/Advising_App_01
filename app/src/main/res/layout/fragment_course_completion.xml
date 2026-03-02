@@ -116,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:backgroundTint="#d22031"
-        android:text="Back to Class Layout"
+        android:text="@string/back_to_class_layout"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
         app:layout_constraintEnd_toEndOf="parent"
