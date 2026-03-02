@@ -4,14 +4,15 @@ package com.vanarsdale.makinganav.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.vanarsdale.makinganav.R;
@@ -22,6 +23,15 @@ import java.lang.String;
 public final class FragmentFAQResourcesBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ImageView faqArrow1;
+
+  @NonNull
+  public final ImageView faqArrow2;
+
+  @NonNull
+  public final ImageView faqArrow3;
 
   @NonNull
   public final TextView faqContent1;
@@ -36,13 +46,13 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
   public final View faqDivider;
 
   @NonNull
-  public final TextView faqHeader1;
+  public final LinearLayout faqHeader1;
 
   @NonNull
-  public final TextView faqHeader2;
+  public final LinearLayout faqHeader2;
 
   @NonNull
-  public final TextView faqHeader3;
+  public final LinearLayout faqHeader3;
 
   @NonNull
   public final LinearLayout faqItem1;
@@ -63,7 +73,19 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
   public final ConstraintLayout frameLayout;
 
   @NonNull
-  public final Guideline guidelineMiddle;
+  public final View headerBg;
+
+  @NonNull
+  public final ImageView imageView;
+
+  @NonNull
+  public final ImageView resArrow1;
+
+  @NonNull
+  public final ImageView resArrow2;
+
+  @NonNull
+  public final ImageView resArrow3;
 
   @NonNull
   public final TextView resContent1;
@@ -75,13 +97,13 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
   public final TextView resContent3;
 
   @NonNull
-  public final TextView resHeader1;
+  public final LinearLayout resHeader1;
 
   @NonNull
-  public final TextView resHeader2;
+  public final LinearLayout resHeader2;
 
   @NonNull
-  public final TextView resHeader3;
+  public final LinearLayout resHeader3;
 
   @NonNull
   public final LinearLayout resItem1;
@@ -107,20 +129,32 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
   @NonNull
   public final View sectionSeparator;
 
+  @NonNull
+  public final TextView titleTemplate;
+
+  @NonNull
+  public final WebView webView;
+
   private FragmentFAQResourcesBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageView faqArrow1, @NonNull ImageView faqArrow2, @NonNull ImageView faqArrow3,
       @NonNull TextView faqContent1, @NonNull TextView faqContent2, @NonNull TextView faqContent3,
-      @NonNull View faqDivider, @NonNull TextView faqHeader1, @NonNull TextView faqHeader2,
-      @NonNull TextView faqHeader3, @NonNull LinearLayout faqItem1, @NonNull LinearLayout faqItem2,
-      @NonNull LinearLayout faqItem3, @NonNull ScrollView faqScrollView,
-      @NonNull TextView faqTitleLabel, @NonNull ConstraintLayout frameLayout,
-      @NonNull Guideline guidelineMiddle, @NonNull TextView resContent1,
-      @NonNull TextView resContent2, @NonNull TextView resContent3, @NonNull TextView resHeader1,
-      @NonNull TextView resHeader2, @NonNull TextView resHeader3, @NonNull LinearLayout resItem1,
+      @NonNull View faqDivider, @NonNull LinearLayout faqHeader1, @NonNull LinearLayout faqHeader2,
+      @NonNull LinearLayout faqHeader3, @NonNull LinearLayout faqItem1,
+      @NonNull LinearLayout faqItem2, @NonNull LinearLayout faqItem3,
+      @NonNull ScrollView faqScrollView, @NonNull TextView faqTitleLabel,
+      @NonNull ConstraintLayout frameLayout, @NonNull View headerBg, @NonNull ImageView imageView,
+      @NonNull ImageView resArrow1, @NonNull ImageView resArrow2, @NonNull ImageView resArrow3,
+      @NonNull TextView resContent1, @NonNull TextView resContent2, @NonNull TextView resContent3,
+      @NonNull LinearLayout resHeader1, @NonNull LinearLayout resHeader2,
+      @NonNull LinearLayout resHeader3, @NonNull LinearLayout resItem1,
       @NonNull LinearLayout resItem2, @NonNull LinearLayout resItem3,
       @NonNull ScrollView resScrollView, @NonNull View resourcesDividerLine,
       @NonNull TextView resourcesTitleLabel, @NonNull EditText searchBar,
-      @NonNull View sectionSeparator) {
+      @NonNull View sectionSeparator, @NonNull TextView titleTemplate, @NonNull WebView webView) {
     this.rootView = rootView;
+    this.faqArrow1 = faqArrow1;
+    this.faqArrow2 = faqArrow2;
+    this.faqArrow3 = faqArrow3;
     this.faqContent1 = faqContent1;
     this.faqContent2 = faqContent2;
     this.faqContent3 = faqContent3;
@@ -134,7 +168,11 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
     this.faqScrollView = faqScrollView;
     this.faqTitleLabel = faqTitleLabel;
     this.frameLayout = frameLayout;
-    this.guidelineMiddle = guidelineMiddle;
+    this.headerBg = headerBg;
+    this.imageView = imageView;
+    this.resArrow1 = resArrow1;
+    this.resArrow2 = resArrow2;
+    this.resArrow3 = resArrow3;
     this.resContent1 = resContent1;
     this.resContent2 = resContent2;
     this.resContent3 = resContent3;
@@ -149,6 +187,8 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
     this.resourcesTitleLabel = resourcesTitleLabel;
     this.searchBar = searchBar;
     this.sectionSeparator = sectionSeparator;
+    this.titleTemplate = titleTemplate;
+    this.webView = webView;
   }
 
   @Override
@@ -178,6 +218,24 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.faq_arrow_1;
+      ImageView faqArrow1 = ViewBindings.findChildViewById(rootView, id);
+      if (faqArrow1 == null) {
+        break missingId;
+      }
+
+      id = R.id.faq_arrow_2;
+      ImageView faqArrow2 = ViewBindings.findChildViewById(rootView, id);
+      if (faqArrow2 == null) {
+        break missingId;
+      }
+
+      id = R.id.faq_arrow_3;
+      ImageView faqArrow3 = ViewBindings.findChildViewById(rootView, id);
+      if (faqArrow3 == null) {
+        break missingId;
+      }
+
       id = R.id.faq_content_1;
       TextView faqContent1 = ViewBindings.findChildViewById(rootView, id);
       if (faqContent1 == null) {
@@ -203,19 +261,19 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
       }
 
       id = R.id.faq_header_1;
-      TextView faqHeader1 = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout faqHeader1 = ViewBindings.findChildViewById(rootView, id);
       if (faqHeader1 == null) {
         break missingId;
       }
 
       id = R.id.faq_header_2;
-      TextView faqHeader2 = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout faqHeader2 = ViewBindings.findChildViewById(rootView, id);
       if (faqHeader2 == null) {
         break missingId;
       }
 
       id = R.id.faq_header_3;
-      TextView faqHeader3 = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout faqHeader3 = ViewBindings.findChildViewById(rootView, id);
       if (faqHeader3 == null) {
         break missingId;
       }
@@ -252,9 +310,33 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
 
       ConstraintLayout frameLayout = (ConstraintLayout) rootView;
 
-      id = R.id.guideline_middle;
-      Guideline guidelineMiddle = ViewBindings.findChildViewById(rootView, id);
-      if (guidelineMiddle == null) {
+      id = R.id.header_bg;
+      View headerBg = ViewBindings.findChildViewById(rootView, id);
+      if (headerBg == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView;
+      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
+      if (imageView == null) {
+        break missingId;
+      }
+
+      id = R.id.res_arrow_1;
+      ImageView resArrow1 = ViewBindings.findChildViewById(rootView, id);
+      if (resArrow1 == null) {
+        break missingId;
+      }
+
+      id = R.id.res_arrow_2;
+      ImageView resArrow2 = ViewBindings.findChildViewById(rootView, id);
+      if (resArrow2 == null) {
+        break missingId;
+      }
+
+      id = R.id.res_arrow_3;
+      ImageView resArrow3 = ViewBindings.findChildViewById(rootView, id);
+      if (resArrow3 == null) {
         break missingId;
       }
 
@@ -277,19 +359,19 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
       }
 
       id = R.id.res_header_1;
-      TextView resHeader1 = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout resHeader1 = ViewBindings.findChildViewById(rootView, id);
       if (resHeader1 == null) {
         break missingId;
       }
 
       id = R.id.res_header_2;
-      TextView resHeader2 = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout resHeader2 = ViewBindings.findChildViewById(rootView, id);
       if (resHeader2 == null) {
         break missingId;
       }
 
       id = R.id.res_header_3;
-      TextView resHeader3 = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout resHeader3 = ViewBindings.findChildViewById(rootView, id);
       if (resHeader3 == null) {
         break missingId;
       }
@@ -342,11 +424,25 @@ public final class FragmentFAQResourcesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentFAQResourcesBinding((ConstraintLayout) rootView, faqContent1, faqContent2,
-          faqContent3, faqDivider, faqHeader1, faqHeader2, faqHeader3, faqItem1, faqItem2, faqItem3,
-          faqScrollView, faqTitleLabel, frameLayout, guidelineMiddle, resContent1, resContent2,
+      id = R.id.title_template;
+      TextView titleTemplate = ViewBindings.findChildViewById(rootView, id);
+      if (titleTemplate == null) {
+        break missingId;
+      }
+
+      id = R.id.webView;
+      WebView webView = ViewBindings.findChildViewById(rootView, id);
+      if (webView == null) {
+        break missingId;
+      }
+
+      return new FragmentFAQResourcesBinding((ConstraintLayout) rootView, faqArrow1, faqArrow2,
+          faqArrow3, faqContent1, faqContent2, faqContent3, faqDivider, faqHeader1, faqHeader2,
+          faqHeader3, faqItem1, faqItem2, faqItem3, faqScrollView, faqTitleLabel, frameLayout,
+          headerBg, imageView, resArrow1, resArrow2, resArrow3, resContent1, resContent2,
           resContent3, resHeader1, resHeader2, resHeader3, resItem1, resItem2, resItem3,
-          resScrollView, resourcesDividerLine, resourcesTitleLabel, searchBar, sectionSeparator);
+          resScrollView, resourcesDividerLine, resourcesTitleLabel, searchBar, sectionSeparator,
+          titleTemplate, webView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

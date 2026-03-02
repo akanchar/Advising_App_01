@@ -4,35 +4,35 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.button.MaterialButtonToggleGroup
+import com.vanarsdale.makinganav.databinding.ClassLayoutBinding
 
 class ClassLayoutFragment : Fragment() {
+
+    private var _binding: ClassLayoutBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.class_layout, container, false)
+    ): View {
+        _binding = ClassLayoutBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        val toggleGroup = view.findViewById<MaterialButtonToggleGroup>(R.id.toggle_major_minor)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Setup navigation buttons from skeleton.xml
-        view.findViewById<ImageButton>(R.id.btn_advisor)?.setOnClickListener {
-            findNavController().navigate(R.id.action_ClassLayout_to_AdvisingInfo)
+        // Setup the "Edit Courses" button to use the Navigation Component
+        binding.btnEditCourses.setOnClickListener {
+            // This uses the action defined in your nav.xml
+            findNavController().navigate(R.id.action_ClassLayout_to_CourseCompletion)
         }
-        view.findViewById<ImageButton>(R.id.btn_help)?.setOnClickListener {
-            findNavController().navigate(R.id.action_ClassLayout_to_how_To_Use)
-        }
-        view.findViewById<ImageButton>(R.id.btn_faq)?.setOnClickListener {
-            findNavController().navigate(R.id.action_ClassLayout_to_FAQ_Resources)
-        }
+    }
 
-        return view
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

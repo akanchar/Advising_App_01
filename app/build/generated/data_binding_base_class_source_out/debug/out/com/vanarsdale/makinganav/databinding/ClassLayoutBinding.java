@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButtonToggleGroup;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.vanarsdale.makinganav.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -23,7 +24,7 @@ public final class ClassLayoutBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnEditCourses;
+  public final ExtendedFloatingActionButton btnEditCourses;
 
   @NonNull
   public final Button btnSelectMajor;
@@ -40,10 +41,10 @@ public final class ClassLayoutBinding implements ViewBinding {
   @NonNull
   public final MaterialButtonToggleGroup toggleMajorMinor;
 
-  private ClassLayoutBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnEditCourses,
-      @NonNull Button btnSelectMajor, @NonNull Button btnSelectMinor,
-      @NonNull LinearLayout legendLayout, @NonNull ScrollView semesterScrollView,
-      @NonNull MaterialButtonToggleGroup toggleMajorMinor) {
+  private ClassLayoutBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ExtendedFloatingActionButton btnEditCourses, @NonNull Button btnSelectMajor,
+      @NonNull Button btnSelectMinor, @NonNull LinearLayout legendLayout,
+      @NonNull ScrollView semesterScrollView, @NonNull MaterialButtonToggleGroup toggleMajorMinor) {
     this.rootView = rootView;
     this.btnEditCourses = btnEditCourses;
     this.btnSelectMajor = btnSelectMajor;
@@ -81,7 +82,7 @@ public final class ClassLayoutBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btn_edit_courses;
-      Button btnEditCourses = ViewBindings.findChildViewById(rootView, id);
+      ExtendedFloatingActionButton btnEditCourses = ViewBindings.findChildViewById(rootView, id);
       if (btnEditCourses == null) {
         break missingId;
       }
