@@ -30,22 +30,7 @@ class TransferInfoFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        // Navigation from skeleton
-        view.findViewById<ImageButton>(R.id.btn_flowchart)?.setOnClickListener {
-            findNavController().navigate(R.id.action_TransferInfo_to_ClassLayout)
-        }
-        view.findViewById<ImageButton>(R.id.btn_advisor)?.setOnClickListener {
-            findNavController().navigate(R.id.action_TransferInfo_to_AdvisingInfo)
-        }
-        view.findViewById<ImageButton>(R.id.btn_help)?.setOnClickListener {
-            findNavController().navigate(R.id.action_TransferInfo_to_how_To_Use)
-        }
-        view.findViewById<ImageButton>(R.id.btn_faq)?.setOnClickListener {
-            findNavController().navigate(R.id.action_TransferInfo_to_FAQ_Resources)
-        }
-        view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
-            findNavController().navigate(R.id.action_TransferInfo_to_StudentProfile)
-        }
+
 
         return view
     }

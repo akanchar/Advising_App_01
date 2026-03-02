@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <!-- Header Section -->
+    <View
+        android:id="@+id/header_bg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/brand_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/UTLogo"
+        android:layout_width="@dimen/header_logo_size"
+        android:layout_height="@dimen/header_logo_size"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:contentDescription="@string/university_logo_description"
+        app:layout_constraintBottom_toBottomOf="@id/header_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_bg"
+        app:srcCompat="@drawable/UT_Spartans_wordmark" />
+
+    <TextView
+        android:id="@+id/UplanID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/u_plan_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_app_name"
+        android:textStyle="bold"
+        android:shadowColor="@color/black_transparent_25"
+        android:shadowDx="@dimen/shadow_offset"
+        android:shadowDy="@dimen/shadow_offset"
+        android:shadowRadius="@dimen/shadow_radius"
+        app:layout_constraintBottom_toBottomOf="@id/header_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_bg" />
+
+    <!-- Bottom Navigation Section -->
+    <View
+        android:id="@+id/bottom_nav_bg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:background="@color/brand_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Container for Buttons -->
+    <LinearLayout
+        android:id="@+id/nav_buttons_container"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_flowchart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/flowchart_button_description"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btn_advisor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/advisor_button_description"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:tint="@color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_help"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/help_button_description"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_help"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btn_faq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/faq_button_description"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_info_details"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <!-- Account Button -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/center_button_card"
+        android:layout_width="@dimen/center_button_size"
+        android:layout_height="@dimen/center_button_size"
+        android:layout_marginBottom="@dimen/center_button_margin_bottom"
+        app:cardCornerRadius="@dimen/center_button_corner_radius"
+        app:cardBackgroundColor="@color/maroon"
+        app:cardElevation="@dimen/center_button_elevation"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_nav_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="@string/profile_button_description"
+            android:scaleType="centerInside"
+            android:padding="@dimen/fragment_horizontal_margin"
+            app:tint="@color/white" />
+    </com.google.android.material.card.MaterialCardView>
+
+</merge>

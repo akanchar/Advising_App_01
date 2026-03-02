@@ -20,26 +20,7 @@ class ClassLayoutFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.class_layout, container, false)
 
-        val header = view.findViewById<TextView>(R.id.major_header)
-        val imageView = view.findViewById<ImageView>(R.id.imageViewFlowchart)
         val toggleGroup = view.findViewById<MaterialButtonToggleGroup>(R.id.toggle_major_minor)
-
-        toggleGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
-            if (isChecked) {
-                when (checkedId) {
-                    R.id.btn_select_major -> {
-                        header.text = getString(R.string.math_major_flowchart_title)
-                        imageView.setImageResource(R.drawable.mathclas)
-                    }
-                    R.id.btn_select_minor -> {
-                        header.text = "Math Minor Requirements"
-                        // Placeholder: in a real app, you'd have a separate image for the minor
-                        imageView.setImageResource(R.drawable.mathclas) 
-                        imageView.alpha = 0.5f // Visual indicator it's different/placeholder
-                    }
-                }
-            }
-        }
 
         // Setup navigation buttons from skeleton.xml
         view.findViewById<ImageButton>(R.id.btn_advisor)?.setOnClickListener {
@@ -50,9 +31,6 @@ class ClassLayoutFragment : Fragment() {
         }
         view.findViewById<ImageButton>(R.id.btn_faq)?.setOnClickListener {
             findNavController().navigate(R.id.action_ClassLayout_to_FAQ_Resources)
-        }
-        view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
-            findNavController().navigate(R.id.action_ClassLayout_to_StudentProfile)
         }
 
         return view
