@@ -42,7 +42,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/UT_Spartans_wordmark" />
+        app:srcCompat="@drawable/ut_spartans_wordmark" />
 
     <WebView
         android:id="@+id/webView"

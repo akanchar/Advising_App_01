@@ -13,9 +13,6 @@ app:startDestination="@id/StartingScreen" >
     <action
         android:id="@+id/action_LoginScreen_to_forgotPasswordFragment"
         app:destination="@id/forgotPasswordFragment" />
-    <action
-        android:id="@+id/action_LoginScreen_to_progressAreaFragment2"
-        app:destination="@id/progressAreaFragment2" />
 
 </fragment>
 <fragment
@@ -38,15 +35,6 @@ app:startDestination="@id/StartingScreen" >
     android:label="class_layout"
     tools:layout="@layout/class_layout" >
 
-    <action
-        android:id="@+id/action_ClassLayout_to_AdvisingInfo"
-        app:destination="@id/AdvisingInfo" />
-    <action
-        android:id="@+id/action_ClassLayout_to_how_To_Use"
-        app:destination="@id/how_To_Use" />
-    <action
-        android:id="@+id/action_ClassLayout_to_FAQ_Resources"
-        app:destination="@id/FAQ_Resources" />
     <action
         android:id="@+id/action_ClassLayout_to_CourseCompletion"
         app:destination="@id/CourseCompletion" />
@@ -72,19 +60,7 @@ app:startDestination="@id/StartingScreen" >
     android:id="@+id/AdvisingInfo"
     android:name="com.vanarsdale.makinganav.AdvisingInfoFragment"
     android:label="fragment_advising_info"
-    tools:layout="@layout/fragment_advising_info" >
-
-    <action
-        android:id="@+id/action_AdvisingInfo_to_ClassLayout"
-        app:destination="@id/ClassLayout" />
-    <action
-        android:id="@+id/action_AdvisingInfo_to_how_To_Use"
-        app:destination="@id/how_To_Use" />
-    <action
-        android:id="@+id/action_AdvisingInfo_to_FAQ_Resources"
-        app:destination="@id/FAQ_Resources" />
-
-</fragment>
+    tools:layout="@layout/fragment_advising_info" />
 <fragment
     android:id="@+id/FAQ_Resources"
     android:name="com.vanarsdale.makinganav.FAQResources"
@@ -97,37 +73,15 @@ app:startDestination="@id/StartingScreen" >
         app:argType="string"
         app:nullable="true" />
 
-    <action
-        android:id="@+id/action_FAQ_Resources_to_how_To_Use"
-        app:destination="@id/how_To_Use" />
-    <action
-        android:id="@+id/action_FAQ_Resources_to_ClassLayout"
-        app:destination="@id/ClassLayout" />
-    <action
-        android:id="@+id/action_FAQ_Resources_to_AdvisingInfo"
-        app:destination="@id/AdvisingInfo" />
-
 </fragment>
 <fragment
     android:id="@+id/how_To_Use"
     android:name="com.vanarsdale.makinganav.How_To_Use"
     android:label="fragment_how__to__use"
-    tools:layout="@layout/fragment_how__to__use" >
-
-    <action
-        android:id="@+id/action_how_To_Use_to_ClassLayout"
-        app:destination="@id/ClassLayout" />
-    <action
-        android:id="@+id/action_how_To_Use_to_AdvisingInfo"
-        app:destination="@id/AdvisingInfo" />
-    <action
-        android:id="@+id/action_how_To_Use_to_FAQ_Resources"
-        app:destination="@id/FAQ_Resources" />
-
-</fragment>
+    tools:layout="@layout/fragment_how__to__use" />
 <fragment
     android:id="@+id/signupFragment"
-    android:name="com.vanarsdale.makinganav.ui.signup.signupFragment"
+    android:name="com.vanarsdale.makinganav.ui.signup.SignupFragment"
     android:label="Sign Up"
     tools:layout="@layout/fragment_signup" >
 
@@ -161,18 +115,28 @@ app:startDestination="@id/StartingScreen" >
     <action
         android:id="@+id/action_progressAreaFragment2_to_StudentProfile"
         app:destination="@id/StudentProfile" />
-    <action
-        android:id="@+id/action_progressAreaFragment2_to_ClassLayout"
-        app:destination="@id/ClassLayout" />
-    <action
-        android:id="@+id/action_progressAreaFragment2_to_AdvisingInfo"
-        app:destination="@id/AdvisingInfo" />
-    <action
-        android:id="@+id/action_progressAreaFragment2_to_how_To_Use"
-        app:destination="@id/how_To_Use" />
-    <action
-        android:id="@+id/action_progressAreaFragment2_to_FAQ_Resources"
-        app:destination="@id/FAQ_Resources" />
 
 </fragment>
+
+<!-- Global Actions for Bottom Nav -->
+<action
+    android:id="@+id/action_global_ClassLayout"
+    app:destination="@id/ClassLayout"
+    app:launchSingleTop="true" />
+<action
+    android:id="@+id/action_global_AdvisingInfo"
+    app:destination="@id/AdvisingInfo"
+    app:launchSingleTop="true" />
+<action
+    android:id="@+id/action_global_StudentProfile"
+    app:destination="@id/StudentProfile"
+    app:launchSingleTop="true" />
+<action
+    android:id="@+id/action_global_how_To_Use"
+    app:destination="@id/how_To_Use"
+    app:launchSingleTop="true" />
+<action
+    android:id="@+id/action_global_FAQ_Resources"
+    app:destination="@id/FAQ_Resources"
+    app:launchSingleTop="true" />
 </navigation>
