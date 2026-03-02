@@ -72,7 +72,7 @@
 
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.vanarsdale.makinganav.ui.signup.signupFragment"
+        android:name="com.vanarsdale.makinganav.ui.signup.SignupFragment"
         android:label="Sign Up"
         tools:layout="@layout/fragment_signup" >
         <action
@@ -104,5 +104,27 @@
             android:id="@+id/action_progressAreaFragment2_to_StudentProfile"
             app:destination="@id/StudentProfile" />
     </fragment>
+
+    <!-- Global Actions for Bottom Nav -->
+    <action
+        android:id="@+id/action_global_ClassLayout"
+        app:destination="@id/ClassLayout"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_AdvisingInfo"
+        app:destination="@id/AdvisingInfo"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_StudentProfile"
+        app:destination="@id/StudentProfile"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_how_To_Use"
+        app:destination="@id/how_To_Use"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_FAQ_Resources"
+        app:destination="@id/FAQ_Resources"
+        app:launchSingleTop="true" />
 
 </navigation>

@@ -30,6 +30,9 @@ public final class FragmentCourseCompletionBinding implements ViewBinding {
   public final Button btnAddCourse;
 
   @NonNull
+  public final Button btnBackToClassLayout;
+
+  @NonNull
   public final TextView completionTitle;
 
   @NonNull
@@ -54,13 +57,14 @@ public final class FragmentCourseCompletionBinding implements ViewBinding {
   public final Spinner spinnerSemester;
 
   private FragmentCourseCompletionBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnAddCourse, @NonNull TextView completionTitle,
-      @NonNull LinearLayout contentLayout, @NonNull TextInputEditText etCourseSearch,
-      @NonNull RecyclerView rvCompletedCourses, @NonNull RecyclerView rvSearchResults,
-      @NonNull TextInputLayout searchLayout, @NonNull MaterialCardView searchResultsCard,
-      @NonNull Spinner spinnerSemester) {
+      @NonNull Button btnAddCourse, @NonNull Button btnBackToClassLayout,
+      @NonNull TextView completionTitle, @NonNull LinearLayout contentLayout,
+      @NonNull TextInputEditText etCourseSearch, @NonNull RecyclerView rvCompletedCourses,
+      @NonNull RecyclerView rvSearchResults, @NonNull TextInputLayout searchLayout,
+      @NonNull MaterialCardView searchResultsCard, @NonNull Spinner spinnerSemester) {
     this.rootView = rootView;
     this.btnAddCourse = btnAddCourse;
+    this.btnBackToClassLayout = btnBackToClassLayout;
     this.completionTitle = completionTitle;
     this.contentLayout = contentLayout;
     this.etCourseSearch = etCourseSearch;
@@ -101,6 +105,12 @@ public final class FragmentCourseCompletionBinding implements ViewBinding {
       id = R.id.btn_add_course;
       Button btnAddCourse = ViewBindings.findChildViewById(rootView, id);
       if (btnAddCourse == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_back_to_class_layout;
+      Button btnBackToClassLayout = ViewBindings.findChildViewById(rootView, id);
+      if (btnBackToClassLayout == null) {
         break missingId;
       }
 
@@ -153,8 +163,8 @@ public final class FragmentCourseCompletionBinding implements ViewBinding {
       }
 
       return new FragmentCourseCompletionBinding((ConstraintLayout) rootView, btnAddCourse,
-          completionTitle, contentLayout, etCourseSearch, rvCompletedCourses, rvSearchResults,
-          searchLayout, searchResultsCard, spinnerSemester);
+          btnBackToClassLayout, completionTitle, contentLayout, etCourseSearch, rvCompletedCourses,
+          rvSearchResults, searchLayout, searchResultsCard, spinnerSemester);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
