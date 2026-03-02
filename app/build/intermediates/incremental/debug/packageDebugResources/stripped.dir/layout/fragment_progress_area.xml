@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ProgressAreaFragment">
+
+    <!-- Template Skeleton -->
+    <!-- The previewer needs to know header_bg and bottom_nav_bg are inside here -->
+    <include layout="@layout/skeleton" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        app:layout_constraintTop_toBottomOf="@id/header_bg"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Academic Progress"
+                android:textAlignment="center"
+                android:textColor="#d22031"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- GPA Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cumulative GPA"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gpa_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.85"
+                        android:textColor="#d22031"
+                        android:textSize="48sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Major Progress Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Major: Mathematics"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_major"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:trackThickness="12dp"
+                app:trackCornerRadius="6dp"
+                android:progress="75"
+                app:indicatorColor="#d22031"
+                app:trackColor="#EEEEEE"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="75% Complete (45 / 60 Credits)"
+                android:textAlignment="viewEnd"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Minor Progress Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minor: Computer Science"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_minor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:trackThickness="12dp"
+                app:trackCornerRadius="6dp"
+                android:progress="40"
+                app:indicatorColor="#800000"
+                app:trackColor="#EEEEEE"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="40% Complete (8 / 20 Credits)"
+                android:textAlignment="viewEnd"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Credit Breakdown Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit Breakdown"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Core Requirements" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" android:textColor="#2E7D32" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Major Requirements" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="75%" android:textColor="#d22031" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Electives" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20%" android:textColor="#666666" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Change Profile Information Button -->
+            <Button
+                android:id="@+id/btn_change_profile"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="#d22031"
+                android:text="Change Profile Information"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
