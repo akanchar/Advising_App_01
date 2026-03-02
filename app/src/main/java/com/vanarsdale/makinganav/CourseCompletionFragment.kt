@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.LinearLayout
+import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -14,6 +16,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class CourseCompletionFragment : Fragment() {
 
@@ -23,10 +26,30 @@ class CourseCompletionFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_course_completion, container, false)
 
-        val etSearch = view.findViewById<TextInputEditText>(R.id.et_course_search)
+        val radioGroup = view.findViewById<RadioGroup>(R.id.rg_search_method)
+        val searchLayout = view.findViewById<TextInputLayout>(R.id.search_layout)
+        val manualEntryLayout = view.findViewById<LinearLayout>(R.id.manual_entry_container)
+        val statusMessage = view.findViewById<TextView>(R.id.tv_status_message)
+        
         val spinnerSemester = view.findViewById<Spinner>(R.id.spinner_semester)
         val btnAdd = view.findViewById<Button>(R.id.btn_add_course)
         val rvCompleted = view.findViewById<RecyclerView>(R.id.rv_completed_courses)
+
+        // Conditional UI: Toggle between Search and Manual Entry
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.rb_search -> {
+                    searchLayout.visibility = View.VISIBLE
+                    manualEntryLayout.visibility = View.GONE
+                    statusMessage.text = "Using course catalog search"
+                }
+                R.id.rb_manual -> {
+                    searchLayout.visibility = View.GONE
+                    manualEntryLayout.visibility = View.VISIBLE
+                    statusMessage.text = "Entering course details manually"
+                }
+            }
+        }
 
         // Setup Semester Spinner
         val semesters = arrayOf("Select Semester", "Fall 2023", "Spring 2024", "Fall 2024", "Spring 2025")
@@ -34,23 +57,7 @@ class CourseCompletionFragment : Fragment() {
         semesterAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerSemester.adapter = semesterAdapter
 
-        // Setup Completed Courses RecyclerView
         rvCompleted.layoutManager = LinearLayoutManager(requireContext())
-        // Note: You would typically set an adapter here for the RecyclerView
-
-        btnAdd.setOnClickListener {
-            val courseSearch = etSearch.text.toString()
-            val selectedSemester = spinnerSemester.selectedItem.toString()
-
-            if (courseSearch.isEmpty() || selectedSemester == "Select Semester") {
-                // Handle error or toast
-                return@setOnClickListener
-            }
-
-            // Logic to add the course would go here
-            etSearch.text?.clear()
-            spinnerSemester.setSelection(0)
-        }
 
         // Navigation from skeleton
         view.findViewById<ImageButton>(R.id.btn_flowchart)?.setOnClickListener {
@@ -59,6 +66,10 @@ class CourseCompletionFragment : Fragment() {
         
         view.findViewById<ImageButton>(R.id.btn_profile)?.setOnClickListener {
             findNavController().navigate(R.id.StudentProfile)
+        }
+
+        view.findViewById<Button>(R.id.btn_back_to_class_layout).setOnClickListener {
+            findNavController().popBackStack()
         }
 
         return view

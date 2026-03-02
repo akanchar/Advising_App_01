@@ -10,40 +10,95 @@
     <!-- Template Skeleton -->
     <include layout="@layout/skeleton" />
 
+    <!-- Department Selector (Conditional Trigger) -->
+    <LinearLayout
+        android:id="@+id/department_selector_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/header_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Dept:"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_dept_cs"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comp Sci"
+                    android:textSize="12sp" />
+                <Button
+                    android:id="@+id/btn_dept_biz"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Business"
+                    android:textSize="12sp" />
+                <Button
+                    android:id="@+id/btn_dept_art"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Fine Arts"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
     <!-- Advising Content -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_bg">
+        app:layout_constraintTop_toBottomOf="@id/department_selector_container">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/fragment_horizontal_margin">
+            android:padding="20dp">
 
+            <!-- DYNAMIC TEXT: Advising Steps Title -->
             <TextView
                 android:id="@+id/advising_steps_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/advising_steps_overview_title"
-                android:textColor="@color/brand_red"
-                android:textSize="@dimen/text_size_title"
+                android:text="Computer Science Advising"
+                android:textColor="#d22031"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- DYNAMIC TEXT: Steps Content -->
             <TextView
                 android:id="@+id/advising_steps_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/fragment_vertical_margin"
-                android:lineSpacingExtra="@dimen/line_spacing_extra"
-                android:text="@string/advising_steps_content"
-                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="4dp"
+                android:text="1. Review CS Flowchart\n2. Complete Math placement\n3. Meet with Dr. Alan Turing"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advising_steps_title" />
@@ -51,19 +106,20 @@
             <View
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/divider_height"
-                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
                 android:background="?android:attr/listDivider"
                 app:layout_constraintTop_toBottomOf="@id/advising_steps_content" />
 
+            <!-- DYNAMIC SECTION: Advisor Info -->
             <TextView
                 android:id="@+id/advisor_contact_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_xlarge"
-                android:text="@string/advisor_contact_info_title"
-                android:textColor="@color/brand_red"
-                android:textSize="@dimen/text_size_title"
+                android:layout_marginTop="24dp"
+                android:text="Department Advisor"
+                android:textColor="#d22031"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider" />
@@ -72,9 +128,9 @@
                 android:id="@+id/advisor_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/fragment_vertical_margin"
-                android:text="@string/advisor_name"
-                android:textSize="@dimen/text_size_body_2"
+                android:layout_marginTop="12dp"
+                android:text="Dr. Alan Turing"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_contact_title" />
@@ -83,9 +139,9 @@
                 android:id="@+id/advisor_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:text="@string/advisor_email"
-                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginTop="8dp"
+                android:text="aturing@ut.edu"
+                android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_name" />
 
@@ -93,24 +149,44 @@
                 android:id="@+id/advisor_office"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_small"
-                android:text="@string/advisor_office"
-                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginTop="4dp"
+                android:text="Tech Building 301"
+                android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/advisor_email" />
+
+            <!-- CONDITIONAL VISIBILITY: Lab Hours (Only for CS) -->
+            <LinearLayout
+                android:id="@+id/cs_lab_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#F0F0F0"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/advisor_office">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CS Lab Hours:"
+                    android:textStyle="bold"
+                    android:textColor="#333333"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mon-Fri: 8:00 AM - 10:00 PM"/>
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btn_contact_advisor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_xlarge"
-                android:backgroundTint="@color/brand_red"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#d22031"
                 android:text="Email Advisor"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/advisor_office"
-                app:icon="@android:drawable/ic_dialog_email"
-                app:iconTint="@color/white" />
+                app:layout_constraintTop_toBottomOf="@id/cs_lab_info" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

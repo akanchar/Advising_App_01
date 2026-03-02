@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.ImageButton
+import android.widget.LinearLayout
+import android.widget.RadioGroup
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -19,18 +20,34 @@ class TransferInfoFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_transfer_info, container, false)
 
-        val spinnerYear = view.findViewById<Spinner>(R.id.spinner_incoming_year)
-        val years = arrayOf("2020", "2021", "2022", "2023", "2024", "2025")
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, years)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerYear.adapter = adapter
+        val domesticContainer = view.findViewById<LinearLayout>(R.id.domestic_info_container)
+        val internationalContainer = view.findViewById<LinearLayout>(R.id.international_info_container)
+        val radioGroup = view.findViewById<RadioGroup>(R.id.rg_transfer_type)
 
-        view.findViewById<Button>(R.id.btn_save_transfer_info).setOnClickListener {
-            // Placeholder for save logic
-            findNavController().popBackStack()
+        // Conditional UI: Toggle Domestic/International Sections
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.rb_domestic -> {
+                    domesticContainer.visibility = View.VISIBLE
+                    internationalContainer.visibility = View.GONE
+                }
+                R.id.rb_international -> {
+                    domesticContainer.visibility = View.GONE
+                    internationalContainer.visibility = View.VISIBLE
+                }
+            }
         }
 
+        // Setup State Spinner for Domestic
+        val spinnerState = view.findViewById<Spinner>(R.id.spinner_state)
+        val states = arrayOf("Florida", "New York", "California", "Texas", "Other")
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, states)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerState.adapter = adapter
 
+        view.findViewById<Button>(R.id.btn_save_transfer_info).setOnClickListener {
+            findNavController().popBackStack()
+        }
 
         return view
     }

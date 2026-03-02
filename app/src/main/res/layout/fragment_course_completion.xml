@@ -24,68 +24,109 @@
             android:id="@+id/completionTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="Course Completion"
+            android:text="Degree Progress"
             android:textAlignment="center"
             android:textColor="#d22031"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <!-- Search Section -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/search_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Search Courses (e.g., MAT 170)"
-            app:startIconDrawable="@android:drawable/ic_menu_search">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_course_search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeOptions="actionSearch"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Search Results / Suggestions Area (Initially hidden or shown as a list) -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/search_results_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:visibility="gone"
-            app:cardElevation="4dp">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_search_results"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxHeight="200dp"
-                tools:listitem="@layout/item_course_completion" />
-        </com.google.android.material.card.MaterialCardView>
-
+        <!-- Major Selector (Conditional Trigger) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Select Semester"
+            android:text="Select Your Major:"
             android:textStyle="bold"
-            android:textColor="#333333" />
+            android:textColor="#555555" />
 
         <Spinner
-            android:id="@+id/spinner_semester"
+            android:id="@+id/spinner_major_selector"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="12dp"
             android:background="@android:drawable/btn_dropdown" />
 
-        <Button
-            android:id="@+id/btn_add_course"
+        <!-- DYNAMIC DASHBOARD: Changes based on Major -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/progress_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#d22031"
-            android:text="Add to Semester"
-            android:textColor="@color/white" />
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#DDDDDD">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_progress_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Core Requirements: 0%"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_degree"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:progress="0"
+                    android:progressTint="#d22031" />
+
+                <TextView
+                    android:id="@+id/tv_priority_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Select a major to see priority courses."
+                    android:textColor="#d22031"
+                    android:textSize="13sp"
+                    android:fontStyle="italic" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Search Section -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search Courses to Add"
+            app:startIconDrawable="@android:drawable/ic_menu_search">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_course_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_semester"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <Button
+                android:id="@+id/btn_add_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#d22031"
+                android:text="Add"
+                android:textColor="@color/white" />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
@@ -93,20 +134,11 @@
             android:layout_marginVertical="16dp"
             android:background="#DDDDDD" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Completed Courses"
-            android:textStyle="bold"
-            android:textColor="#333333" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_completed_courses"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:listitem="@layout/item_course_completion" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
