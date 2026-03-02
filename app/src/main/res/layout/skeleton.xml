@@ -34,9 +34,9 @@
         android:textSize="@dimen/text_size_app_name"
         android:textStyle="bold"
         android:shadowColor="@color/black_transparent_25"
-        android:shadowDx="@dimen/shadow_offset"
-        android:shadowDy="@dimen/shadow_offset"
-        android:shadowRadius="@dimen/shadow_radius"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="4"
         app:layout_constraintBottom_toBottomOf="@id/header_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/flowchart_button_description"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_sort_by_size"
             app:tint="@color/white" />
 
@@ -79,7 +79,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/advisor_button_description"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_myplaces"
             app:tint="@color/white" />
 
@@ -94,7 +94,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/help_button_description"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_help"
             app:tint="@color/white" />
 
@@ -104,7 +104,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/faq_button_description"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_info_details"
             app:tint="@color/white" />
     </LinearLayout>
@@ -127,7 +127,7 @@
             android:id="@+id/btn_profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_gallery"
             android:contentDescription="@string/profile_button_description"
             android:scaleType="centerInside"

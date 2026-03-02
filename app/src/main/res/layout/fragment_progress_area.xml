@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                android:text="Academic Progress"
+                android:text="@string/academic_progress_title"
                 android:textAlignment="center"
                 android:textColor="#d22031"
                 android:textSize="28sp"
@@ -55,7 +55,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cumulative GPA"
+                        android:text="@string/cumulative_gpa_label"
                         android:textColor="#666666"
                         android:textSize="16sp" />
 
@@ -63,7 +63,7 @@
                         android:id="@+id/tv_gpa_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3.85"
+                        android:text="@string/gpa_placeholder"
                         android:textColor="#d22031"
                         android:textSize="48sp"
                         android:textStyle="bold" />
@@ -74,7 +74,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Major: Mathematics"
+                android:text="@string/major_mathematics_label"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="#333333"
@@ -94,7 +94,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="75% Complete (45 / 60 Credits)"
+                android:text="@string/major_progress_placeholder"
                 android:textAlignment="viewEnd"
                 android:textSize="14sp"
                 android:textColor="#666666"
@@ -104,7 +104,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Minor: Computer Science"
+                android:text="@string/minor_cs_label"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="#333333"
@@ -124,7 +124,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="40% Complete (8 / 20 Credits)"
+                android:text="@string/minor_progress_placeholder"
                 android:textAlignment="viewEnd"
                 android:textSize="14sp"
                 android:textColor="#666666"
@@ -147,7 +147,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Credit Breakdown"
+                        android:text="@string/credit_breakdown_label"
                         android:textStyle="bold"
                         android:layout_marginBottom="12dp" />
 
@@ -155,8 +155,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Core Requirements" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" android:textColor="#2E7D32" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/core_requirements_label" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/core_requirements_value" android:textColor="#2E7D32" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -164,8 +164,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:orientation="horizontal">
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Major Requirements" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="75%" android:textColor="#d22031" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/major_requirements_label" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/major_requirements_value" android:textColor="#d22031" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -173,8 +173,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:orientation="horizontal">
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Electives" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20%" android:textColor="#666666" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/electives_label" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/electives_value" android:textColor="#666666" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -186,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="#d22031"
-                android:text="Change Profile Information"
+                android:text="@string/change_profile_button_text"
                 android:textColor="#FFFFFF"
                 android:textAllCaps="false"
                 android:textSize="16sp"

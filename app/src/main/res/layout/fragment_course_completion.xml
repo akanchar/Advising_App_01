@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Course Completion"
+            android:text="@string/course_completion_title"
             android:textAlignment="center"
             android:textColor="#d22031"
             android:textSize="24sp"
@@ -37,7 +37,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search Courses (e.g., MAT 170)"
+            android:hint="@string/course_completion_search_hint"
             app:startIconDrawable="@android:drawable/ic_menu_search">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Select Semester"
+            android:text="@string/select_semester_label"
             android:textStyle="bold"
             android:textColor="#333333" />
 
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#d22031"
-            android:text="Add to Semester"
+            android:text="@string/course_completion_add_to_semester"
             android:textColor="@color/white" />
 
         <View
@@ -97,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="Completed Courses"
+            android:text="@string/completed_courses_label"
             android:textStyle="bold"
             android:textColor="#333333" />
 
