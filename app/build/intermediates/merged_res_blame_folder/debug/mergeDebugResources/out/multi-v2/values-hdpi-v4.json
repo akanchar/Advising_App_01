@@ -4,7 +4,7 @@
             "outputFile": "com.vanarsdale.makinganav.app-mergeDebugResources-47:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/mvanarsdale/.gradle/caches/9.1.0/transforms/28736a93f5d435c6f038b2b04460a87a/transformed/appcompat-1.7.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "C:\\Users\\jerem\\.gradle\\caches\\9.1.0\\transforms\\28736a93f5d435c6f038b2b04460a87a\\workspace\\transformed\\appcompat-1.7.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

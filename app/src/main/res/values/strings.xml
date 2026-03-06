@@ -7,10 +7,10 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
+    <string name="welcome">Welcome!</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed">Login failed</string>
 
     <!-- General -->
     <string name="u_plan_title">U-PLAN</string>
@@ -97,9 +97,9 @@
     <string name="step_3_title">3. Performing the Main Action</string>
     <string name="step_3_text">Tap on any question or resource title to expand the section and view detailed information.</string>
     <string name="step_4_title">4. Saving or Submitting</string>
-    <string name="step_4_text">If you fill out any forms or make changes, ensure you tap \\'Save' or 'Submit' at the bottom of the page.</string>
+    <string name="step_4_text">If you fill out any forms or make changes, ensure you tap \'Save\' or \'Submit\' at the bottom of the page.</string>
     <string name="step_5_title">5. Logging Out</string>
-    <string name="step_5_text">To exit, you can simply close the app or find the \\'Logout' option in your profile settings.</string>
+    <string name="step_5_text">To exit, you can simply close the app or find the \'Logout\' option in your profile settings.</string>
 
     <!-- fragment_studentprofile.xml -->
     <string name="student_profile_title">Student Profile</string>
@@ -113,9 +113,9 @@
     <string name="search_hint">Search questions or resources...</string>
     <string name="faq_title">Frequently Asked Questions</string>
     <string name="faq_1_title">How do I schedule an appointment?</string>
-    <string name="faq_1_content">You can schedule an appointment through the main dashboard by clicking the 'Schedule' button and selecting an available time slot.</string>
+    <string name="faq_1_content">You can schedule an appointment through the main dashboard by clicking the \'Schedule\' button and selecting an available time slot.</string>
     <string name="faq_2_title">Where can I find my student ID?</string>
-    <string name="faq_2_content">Your student ID is located on your physical Spartan Card or can be viewed in the 'Student Profile' section of this app.</string>
+    <string name="faq_2_content">Your student ID is located on your physical Spartan Card or can be viewed in the \'Student Profile\' section of this app.</string>
     <string name="faq_3_title">How do I change my major?</string>
     <string name="faq_3_content">To change your major, you must meet with your current academic advisor to complete the necessary paperwork and obtain approval.</string>
     <string name="resources_title">Resources</string>
@@ -142,13 +142,13 @@
     <string name="completed_courses_label">Completed Courses</string>
     <string name="course_completion_search_hint">Search Courses (e.g., MAT 170)</string>
     <string name="course_completion_add_to_semester">Add to Semester</string>
-    <string name="checkmark">✓</string>
+    <string name="checkmark">\u2713</string>
     <string name="delete_course_description">Delete course</string>
-    <string name="back_to_class_layout">Back to Class Layout"</string>
+    <string name="back_to_class_layout">Back to Class Layout</string>
 
     <!-- fragment_forgot_password.xml -->
     <string name="forgot_password_title_text">Forgot Password</string>
-    <string name="forgot_password_instruction_text">Enter your email address and we'll send you instructions to reset your password.</string>
+    <string name="forgot_password_instruction_text">Enter your email address and we\'ll send you instructions to reset your password.</string>
     <string name="reset_password_button_text">Reset Password</string>
     <string name="back_to_login_button_text">Back to Login</string>
 
